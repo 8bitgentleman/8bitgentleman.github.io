@@ -55,7 +55,7 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting(),
       Plugin.RoamTables(),
-      Plugin.RoamComponents(),
+      Plugin.RoamFlavoredMarkdown(),
       Plugin.TufteComponents(),
       // add footnote plugin here
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),

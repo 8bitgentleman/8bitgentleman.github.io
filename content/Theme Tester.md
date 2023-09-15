@@ -1,0 +1,154 @@
+- Todo
+    - {{[[TODO]]}}  unchecked
+    - {{[[DONE]]}}  checked
+- Text Styling
+    - **Bold**
+    - __Italics__
+    - Highlights ^^of some^^ words
+    - this one, ~~not this one~~
+    - # H1
+        - sub text
+    - ## H2
+        - sub text
+    - ### H3
+        - sub text
+    - ---
+    - View as document
+        this is a paragraph
+        this is another paragraph
+    - View as numbered list
+        1. one
+        2. two
+        3. three
+    - Text Alignments
+        - Left
+        - Center
+        - Right
+        - Justify
+    - Text Reactions
+        - great idea
+- Versoning
+    - First
+    - in-line  {{or: options | versioning}}
+        - suboptions
+- Block refs
+    - The [[Theme Tester]] Page Link
+    - the [[Theme Tester]] link
+    - Embedded blocks
+- Images 
+    - typical remote image
+        - ![](https://i.imgur.com/SEr4dkd.jpg)
+    - remote image with description
+        - ![swedish vallhund](https://i.imgur.com/SEr4dkd.jpg)
+- Uploaded Files
+    - image
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2Ftiz3q_Bm-P.png?alt=media&token=ede018a1-ba7d-4099-8e6c-fa225550ef0e)
+    - video
+        - {{[[video]]: https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FBY1tSter6R.mp4?alt=media&token=07031095-4736-4b0b-899a-26852adbf245}}
+    - gif
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FzAgByL_oF2.gif?alt=media&token=f754e4ba-aadb-43ad-82de-a2f79dc66370)
+    - pdf
+        - {{[[pdf]]: https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2F6FtyOTB3mx.pdf?alt=media&token=0736266f-54d2-46dc-99a8-08f7e7874210}}
+    - audio
+        - {{[[audio]]: https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FZ37C1oBWmW.mp3?alt=media&token=433c0926-dbea-47f5-ab4f-3ec4659ba815}}
+    - binary files
+        - regular file
+            - https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FkQXZxVL_6G.txt?alt=media&token=f35c8688-0ff4-4d59-845a-3bcaa53fc1ea
+        - .zip file
+            - https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FEzyEq4p2Zn.zip?alt=media&token=0697c12e-654d-46a6-943e-fe13293870ba
+- Links
+    - The [[Theme Tester]] Page Link
+        - [[bad improv]]
+        - [[roam/css]]
+    - [[roam/css]]
+    - #[[mental health]]
+    - [Basic Alias]([[Theme Tester]])
+    - [Block Alias](((JF3iFJPKu)))
+    - [External Alias](https://www.usgbc.org/education/sessions/day-1-study-plan-10411494)
+    - {{alias:  Clojure Block Alias}}
+    - {{alias: [[Theme Tester]] Clojure Page Alias}}
+    - This is a paragraph with several types of tags and aliases [Block Alias](((JF3iFJPKu))) [Basic Alias]([[Theme Tester]]) #test [External Alias](https://www.usgbc.org/education/sessions/day-1-study-plan-10411494) [[Theme Tester]] #[[mental health]]
+    - metadata:: www.google.com
+    - Tags
+        - #[[exercise]]
+        - #awe
+        - #[[video]]
+            - video::
+        - #tweet
+        - #religion
+        - #[[campaign 1]]
+        - #newsletter
+        - #[[recipes]] 
+        - #Projects
+        - #[[Quick Capture]]
+        - #[[note taking]]
+        - [[August 5th, 2023]]
+        - [[Video/Movie/Shrek]]
+- Code
+    - `import code`
+    - ```javascript
+super well written code here
+and a second line of amazing code here```
+- Embeds
+    - Embedded blocks
+        - in-line  {{or: options | versioning}}
+            - suboptions
+    - Embedded Pages
+        - {{[[embed]]: [[testing]]}}
+- Misc Roam Components
+    - pomodoro
+        - {{[[POMO]]}}
+    - in-line  {{or:options | versioning}}
+    - Calc
+        - {{calc: 1+ 1}} = {{calc: 1 + 1}}
+    - {{[[slider]]}}
+    - {{[[encrypt]]}}
+    - Diagrams
+        - Regular
+            - {{[[diagram]]}}
+                - one
+                - two 
+                - three
+            - {{diagram}}
+        - Mermaid
+            - {{mermaid}}
+                - pie title Pets adopted by volunteers
+                    - "Dogs" : 386
+                    - "Cats" : 85
+                    - "Rats" : 15					
+        - Table
+        - simple
+	        - {{table}}
+            - {{[[table]]}}
+                - another table
+                    - another column
+                - more subtext
+                    - even more subtext
+                - more subtext
+                    - even more subtext
+        - Kanban
+            - {{[[kanban]]}}
+                - one
+                - two
+                    - sub one
+                    - sub two
+                    - 
+    - query
+        - {{[[query]]: {and: [[Theme Tester]] }}}
+    - comments
+        - There is lots of controversial ideas in this block {{comment-button}}
+    - Blockquotes
+        - [[>]] Regulare quote using page brackets
+        - > bare quote without brackets
+    - Collapsable Parenthesis 
+        - A very long ((and interesting)) quote collapsed and one ((open))
+    - LayTEX
+        - $$O(n^2)$$
+    - word and character counts
+        - {{count}} {{word-count}} very cool  {{character-count}}
+    - progress bar
+        - {{[[roam/render]]:((5juEDRY_n))}}
+            - {{[[TODO]]}} 
+            - {{[[DONE]]}} 
+    - Streaks
+        - {{[[streak]]: [[thoughts]]}}

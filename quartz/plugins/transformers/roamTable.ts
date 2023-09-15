@@ -4,6 +4,8 @@ import { visit } from "unist-util-visit"
 import { toString } from "mdast-util-to-string"
 import Slugger from "github-slugger"
 import { Replace, findAndReplace as mdastFindReplace } from "mdast-util-find-and-replace"
+import { PluggableList } from "unified"
+import { promises as fsPromises } from 'fs';
 
 export interface Options {
   maxDepth: 1 | 2 | 3 | 4 | 5 | 6
@@ -23,41 +25,52 @@ interface TocEntry {
   slug: string // this is just the anchor (#some-slug), not the canonical slug
 }
 
-export const RoamTables: QuartzTransformerPlugin = () => {
+// Recursive function to extract table data
+function extractTableData(node: any, isHeader: boolean = false): string {
+  if (!node.children || node.children.length === 0) {
+    return `<td>${node.value || ''}</td>`;
+  }
+
+  const row = node.children.map(child => extractTableData(child)).join('');
+  return isHeader ? `<tr><th>${row}</th></tr>` : `<tr>${row}</tr>`;
+}
+
+export const RoamTables: QuartzTransformerPlugin<Partial<Options> | undefined> = (
+  userOpts,
+) => {
+  const opts = { ...defaultOptions, ...userOpts }
     return {
       name: "RoamTables",
       markdownPlugins() {
-        return [() => {
-          return (tree, file) => {
-            // console.log(tree)
-            // replace _text_ with the italics version
-            const pattern = /({{.*?\btable\b.*?}})/g;
-            mdastFindReplace(tree, pattern, (_match, capture) => {
-                console.log("")
-                console.log("~~ ",capture)
-                
-              // inner is the text inside of the () of the regex
-            //   const [inner] = capture
-              // return an mdast node
-              // https://github.com/syntax-tree/mdast
-            //   return {
-            //     type: "emphasis",
-            //     children: [{ type: 'text', value: inner }]
-            //   }
-                 return ""
-            })
-  
-           // remove all links (replace with just the link content)
-           // match by 'type' field on an mdast node
-           // https://github.com/syntax-tree/mdast#link in this example
-            // visit(tree, "link", (link: Link) => {
-            //   return {
-            //     type: "paragraph"
-            //     children: [{ type: 'text', value: link.title }]
-            //   }
-            // })
+        const plugins: PluggableList = []
+        const tableRegex = new RegExp(/({{\[\[\btable\b\]\]}})/, "g");
+
+        plugins.push(() => {
+          return (tree: Root, _file) => {
+            
+            visit(tree, 'text', (node, index, parent) => {
+              if (tableRegex.test((node as any).value)) {
+                let htmlTable = '<table>';
+                // Check if the node has children
+                if (parent && parent.children && parent.children.length > 0) {
+                  // Extract table data
+                  htmlTable += extractTableData(parent, true);
+                  console.log(node);
+                  htmlTable += '</table>';
+                  
+                  node.type = "html";
+                  node.value = htmlTable;
+                }
+              }
+            });
+            
+            // console.log(node);
+            
+            // return htmlTable;
           }
-        }]
+        })
+        
+        return plugins
       }
     }
   }

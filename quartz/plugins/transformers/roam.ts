@@ -12,6 +12,7 @@ export interface Options {
   pdfComponent:boolean
   blockquoteComponent:boolean
   tableComponent:boolean
+  attributeComponent:boolean
 }
 
 const defaultOptions: Options = {
@@ -23,6 +24,7 @@ const defaultOptions: Options = {
   pdfComponent:true,
   blockquoteComponent:true,
   tableComponent:true,
+  attributeComponent:true,
 }
 
 const orRegex = new RegExp(/{{or:(.*?)}}/, "g")
@@ -38,16 +40,17 @@ const blockquoteRegex = new RegExp(/\[\[>\]\]/, "g")
 const roamHighlightRegex = new RegExp(/\^\^(.+)\^\^/, "g")
 const roamItalicRegex = new RegExp(/__(.+)__/, "g")
 const tableRegex = new RegExp(/- {{.*?\btable\b.*?}}/, "g")
+const attributeRegex = new RegExp(/\b\w+(?:\s+\w+)*::/, "g")
 /**
 
  * */
 
-export const RoamComponents: QuartzTransformerPlugin<Partial<Options> | undefined> = (
+export const RoamFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> | undefined> = (
   userOpts,
 ) => {
   const opts = { ...defaultOptions, ...userOpts }
   return {
-    name: "RoamComponents",
+    name: "RoamFlavoredMarkdown",
     textTransform(_ctx, src) {
       if (opts.orComponent) {
         src = src.toString()
@@ -118,6 +121,17 @@ export const RoamComponents: QuartzTransformerPlugin<Partial<Options> | undefine
           return bq;
         })
       }
+      // attributes
+      // if (opts.attributeComponent) {
+      //   src = src.toString()
+      //   src = src.replaceAll(attributeRegex, (value, ...capture) => {
+      //     const [match, text, third] = capture
+      //     const attirbute = `<span class"attribute">${match}</span>`
+      //     console.log("~~ match",match )
+      //     // return attirbute;
+      //     // return bq;
+      //   })
+      // }
       // roam highlights
       src = src.toString()
       src = src.replaceAll(roamHighlightRegex, (value, ...capture) => {
@@ -126,14 +140,13 @@ export const RoamComponents: QuartzTransformerPlugin<Partial<Options> | undefine
         return dropdown;
       })
       // roam italics
-      // src = src.toString()
-      src = src.replaceAll(roamHighlightRegex, (value, ...capture) => {
+      src = src.replaceAll(roamItalicRegex, (value, ...capture) => {
         const [match, text] = capture
         const dropdown = `*${match}*`;
         return dropdown;
       })
       // special matching for quotes::
-      src = src.replaceAll("quotes::", "#quotes")
+      src = src.replaceAll("quotes::", "## #quotes")
 
       
       // if (opts.tableComponent) {

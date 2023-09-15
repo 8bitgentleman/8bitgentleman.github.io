@@ -12,7 +12,7 @@ Block reference [[index#^T0xmwnBMP]]
 
 [[How to Be the Greatest Improviser on Earth#^971708|know, care, say]]
 ### Table
-- {{[[table]]}}
+- {{[[table]]}} zz
     - another table
         - another column
     - more subtext
