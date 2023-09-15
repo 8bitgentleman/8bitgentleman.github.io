@@ -14,7 +14,11 @@ export default (() => {
       }
 
       segments.push(timeTaken)
-      return <p class="content-meta">{segments.join(", ")}</p>
+      const content = fileData.frontmatter?.URL
+        ? <p class="content-meta">{segments.join(", ")} <a class="external source-url" target="_blank" href={fileData.frontmatter.URL} ></a></p>
+        : <p class="content-meta">{segments.join(", ")}</p>;
+
+      return content;
     } else {
       return null
     }
@@ -24,6 +28,13 @@ export default (() => {
   .content-meta {
     margin-top: 0;
     color: var(--gray);
+  }
+  .source-url::after {
+    fill: var(--gray);
+    padding-left: 2px;
+    color: transparent;
+    text-shadow: 0 0 0 var(--gray);
+    content: "🔗";
   }
   `
   return ContentMetadata
