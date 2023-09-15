@@ -181,24 +181,24 @@ label {
     display: inline;
   }
 
-  .sidenote,
-  .marginnote {
-      display: none;
-  }
+  // .sidenote,
+  // .marginnote {
+  //     display: none;
+  // }
 
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote {
-      display: block;
-      float: left;
-      left: 1rem;
-      clear: both;
-      width: 95%;
-      margin: 1rem 2.5%;
-      vertical-align: baseline;
-      position: relative;
-  }
+  // .margin-toggle:checked + .sidenote,
+  // .margin-toggle:checked + .marginnote {
+  //     display: block;
+  //     float: left;
+  //     left: 1rem;
+  //     clear: both;
+  //     width: 95%;
+  //     margin: 1rem 2.5%;
+  //     vertical-align: baseline;
+  //     position: relative;
+  // }
 
-  label {
-      cursor: pointer;
-  }
+  // label {
+  //     cursor: pointer;
+  // }
 }
