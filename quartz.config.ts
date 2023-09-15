@@ -3,19 +3,23 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "The Rooftop Garden",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "quartz.jzhao.xyz",
+    //baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Montserrat Alternates",
+        // body: "Oswald Regular",
+        // header: "Abril Fatface",
+        // body: "Lato",
+        // header: "Homemade Apple",
+        body: "Raleway",
         code: "IBM Plex Mono",
       },
       colors: {
@@ -50,7 +54,12 @@ const config: QuartzConfig = {
         priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.SyntaxHighlighting(),
+      Plugin.RoamTables(),
+      Plugin.RoamComponents(),
+      Plugin.TufteComponents(),
+      // add footnote plugin here
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Latex({ renderEngine: "katex" }),
