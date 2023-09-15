@@ -411,6 +411,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                 data: {
                   hProperties: {
                     className: ["tag-link"],
+                    dataTag:tag,
                   },
                 },
                 children: [

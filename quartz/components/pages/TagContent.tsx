@@ -18,10 +18,15 @@ function TagContent(props: QuartzComponentProps) {
   }
 
   const tag = simplifySlug(slug.slice("tags/".length) as FullSlug)
-  const allPagesWithTag = (tag: string) =>
-    allFiles.filter((file) =>
-      (file.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes).includes(tag),
-    )
+  // const allPagesWithTag = (tag: string) =>
+  //   allFiles.filter((file) =>
+  //     (file.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes).includes(tag),
+  //   )
+    const allPagesWithTag = (tag: string) =>
+    allFiles.filter((file) => {
+      const tags = (file.frontmatter?.tags ?? []).concat(file.frontmatter?.Status ? [file.frontmatter.Status] : []);
+      return tags.flatMap(getAllSegmentPrefixes).includes(tag);
+    });
 
   const content =
     (tree as Root).children.length === 0
@@ -55,7 +60,7 @@ function TagContent(props: QuartzComponentProps) {
             return (
               <div>
                 <h2>
-                  <a class="internal tag-link" href={`./${tag}`}>
+                  <a class="internal tag-link" href={`./${tag}`} data-tag={tag}>
                     #{tag}
                   </a>
                 </h2>
