@@ -7,10 +7,10 @@ ul.section-ul {
 }
 
 li.section-li {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 
   & > .section {
-    display: grid;
+    display: flex;
     grid-template-columns: 6em 3fr 1fr;
 
     @media all and (max-width: $mobileBreakpoint) {
@@ -22,16 +22,23 @@ li.section-li {
     & > .tags {
       justify-self: end;
       margin-left: 1rem;
+      flex: 3;
+      flex-wrap: wrap;
+    }
+    & > .desc {
+      flex: 2;
     }
 
     & > .desc > h3 > a {
       background-color: transparent;
+      
     }
 
     & > .meta {
       margin: 0;
       flex-basis: 6em;
       opacity: 0.6;
+      flex: 1;
     }
   }
 }
