@@ -1,1 +1,204 @@
 // put your custom CSS here!
+
+// specific tag stying
+a[data-tag="acorn"]{
+  color: #B37607 !important;
+  background-color: transparent !important;
+  padding: 3px 3px;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+a[data-tag="seedlings"]{
+  color: #0DC670 !important;
+  background-color: transparent !important;
+  padding: 3px 3px;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+a[data-tag="seedlings"]:before {
+  content: '🌱 ';
+}
+a[data-tag="budding"] {
+  color: #0B9351 !important;
+  background-color: transparent !important;
+  padding: 3px 3px;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+a[data-tag="budding"]:before {
+  content: '🌿 ';
+}
+// a[data-tag="evergreen"]{
+//   background: #0DC670 !important;
+//   color: #fff !important;
+//   padding: 3px 8px;
+//   line-height: 2em;
+//   font-weight: 500;
+// }
+// a[data-tag="evergreen"]:before {
+//   content: '🌲 ';
+//   text-shadow: 0 0 3px white;
+//   position: relative;
+// }
+// a[data-tag="evergreen"]:hover{
+//   color:#02120a !important;
+// }
+
+// roam OR select component
+select.roam-or-component{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: 1px solid var(--shiki-token-comment);
+    cursor: pointer;
+    color: var(--shiki-color-text);
+    border-radius: 5px;
+    padding: 0 .5em;
+  }
+
+// external links
+.external::after {
+  fill: var(--gray);
+  padding-left: 2px;
+  color: transparent;
+  text-shadow: 0 0 0 var(--secondary);
+  content: "↗";
+}
+article a.internal:not(.tag-link):not([aria-hidden="true"]):after {
+  content: "\B0";
+  font-size:20px;
+}
+img.cover-image {
+  height: 100px !important;
+  float: left !important;
+  margin-right: 20px !important;
+}
+
+// page title
+.page-title {
+  border-bottom:4px solid var(--secondary);
+  border-left: 4px double black;
+  padding-left: 4px;
+  font-size: 1rem;
+}
+
+///////////
+// TUFTE //
+///////////
+body {
+  counter-reset: sidenote-counter;
+}
+// sidebar
+.sidenote,
+.marginnote {
+    // float: right;
+    // clear: right;
+    // margin-right: -60%;
+    // width: 50%;
+    // margin-top: 0.3rem;
+    // margin-bottom: 0;
+    // font-size: 1.1rem;
+    // line-height: 1.3;
+    // vertical-align: baseline;
+    // position: relative;
+    display: none;
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter;
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    font-family: et-book-roman-old-style;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.sidenote-number:after {
+    // content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem;
+}
+
+.sidenote:before {
+    // content: counter(sidenote-counter) " ";
+    font-size: 1rem;
+    top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left;
+}
+
+.marginnote > code,
+.sidenote > code {
+    font-size: 1rem;
+}
+
+
+input.margin-toggle {
+  display: none;
+}
+
+label.sidenote-number {
+  display: inline-block;
+  max-height: 2rem; /* should be less than or equal to paragraph line-height */
+}
+
+label.margin-toggle:not(.sidenote-number) {
+  display: inline;
+}
+
+.margin-toggle:checked + .sidenote,
+.margin-toggle:checked + .marginnote {
+      display: block;
+      float: left;
+      left: 1rem;
+      clear: both;
+      width: 95%;
+      margin: 1rem 2.5%;
+      vertical-align: baseline;
+      position: relative;
+  }
+
+label {
+    cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+
+  .sidenote,
+  .marginnote {
+      display: none;
+  }
+
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + .marginnote {
+      display: block;
+      float: left;
+      left: 1rem;
+      clear: both;
+      width: 95%;
+      margin: 1rem 2.5%;
+      vertical-align: baseline;
+      position: relative;
+  }
+
+  label {
+      cursor: pointer;
+  }
+}
