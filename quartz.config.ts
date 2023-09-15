@@ -54,9 +54,9 @@ const config: QuartzConfig = {
         priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.SyntaxHighlighting(),
-      Plugin.RoamTables(),
+      // Plugin.RoamTables(),
       Plugin.RoamComponents(),
-      Plugin.TufteComponents(),
+      // Plugin.TufteComponents(),
       // add footnote plugin here
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       
