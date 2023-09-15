@@ -22,7 +22,7 @@ My [[failure résumé]]
 - [experimenting]([[experiment]]) with creating new [[Roam Research]] components
 - Writing [[How to communicate with empathy and collaboration]]
 You can peruse some of my #favorite stuff here
-- __"know, care, say"__
+  - [[How to Be the Greatest Improviser on Earth#^971708|know, care, say]]
 
 Still confused? Read the unfinished piece about the design methodology behind my writing 
 - [[Design for Writing & Thinking]]

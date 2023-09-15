@@ -6,6 +6,8 @@ import { JSResourceToScriptElement, StaticResources } from "../util/resources"
 import { FullSlug, RelativeURL, joinSegments } from "../util/path"
 import { visit } from "unist-util-visit"
 import { Root, Element } from "hast"
+import CoverImage from "./CoverImage"
+import CoverImageConstructor from "./CoverImage"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -15,6 +17,7 @@ interface RenderComponents {
   left: QuartzComponent[]
   right: QuartzComponent[]
   footer: QuartzComponent
+  image: QuartzComponent
 }
 
 export function pageResources(
@@ -100,6 +103,7 @@ export function renderPage(
   } = components
   const Header = HeaderConstructor()
   const Body = BodyConstructor()
+  const CoverImage = CoverImageConstructor()
 
   const LeftComponent = (
     <div class="left sidebar">
@@ -131,6 +135,7 @@ export function renderPage(
                     <HeaderComponent {...componentData} />
                   ))}
                 </Header>
+                <CoverImage {...componentData} />
                 <div class="popover-hint">
                   {beforeBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />

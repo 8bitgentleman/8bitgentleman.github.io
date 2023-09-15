@@ -1,6 +1,16 @@
 test text ^DYQ86Vzzz
 
 Regular text
+Block reference [[index#^T0xmwnBMP]]
+
+[[index#block-ref|^T0xmwnBMP]]
+
+[[How to communicate with empathy and collaboration#^f1e4cb]]
+
+
+[[index#That being said, here are some good pages to start at:|Anchor]]
+
+[[How to Be the Greatest Improviser on Earth#^971708|know, care, say]]
 ### Table
 - {{[[table]]}}
     - another table

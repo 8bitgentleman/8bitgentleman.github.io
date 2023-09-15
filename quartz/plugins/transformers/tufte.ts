@@ -19,17 +19,23 @@ export const TufteComponents: QuartzTransformerPlugin<Partial<Options> | undefin
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "TufteComponents",
-    textTransform(_ctx, src) {
+    textTransform(_ctx, src: string | Buffer) {
       if (opts.sidenoteComponent) {
-        src = src.toString()
-        src = src.replaceAll(sidenoterRegex, (value, ...capture) => {
-          const [match, text] = capture
+        let newSRC: string;
+        if (Buffer.isBuffer(src)) {
+          newSRC = src.toString();
+        } else{
+          newSRC = src;
+        }
 
-          const sidenoterContentRegex = `\\[\\^${match}\\]:\s*(.*)`;
-          const sidenoteContentMatches = [...src.matchAll(sidenoterContentRegex)];
-          const sidenote = `<label for="sn-${match}" class="margin-toggle sidenote-number"><sup>${match}</sup></label>
-                            <input type="checkbox" id="sn-${match}" class="margin-toggle"/>
-                            <span class="sidenote">${sidenoteContentMatches[0][1]}</span>`
+        src = newSRC.replaceAll(sidenoterRegex, (value: string, ...capture: string[]) => {
+            const [match, text] = capture;
+
+            const sidenoterContentRegex = new RegExp(`\\[\\^${match}\\]:\\s*(.*)`, "g")
+            const sidenoteContentMatches = [...newSRC.matchAll(sidenoterContentRegex)];
+            const sidenote = `<label for="sn-${match}" class="margin-toggle sidenote-number"><sup>${match}</sup></label>
+                                <input type="checkbox" id="sn-${match}" class="margin-toggle"/>
+                                <span class="sidenote">${sidenoteContentMatches[0][1]}</span>`;
             return sidenote;
         //   for (const match of matches) {
         //     const foundMatch = match[0]; // The whole match
