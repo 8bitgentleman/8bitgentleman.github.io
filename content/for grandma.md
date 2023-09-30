@@ -6,7 +6,7 @@ tags:
   - grief
   - writing
   - Person/The Grand Margie
-Cover: https://8bitgentleman.github.io/matt/cover_grandma.png
+Cover: https://8bitgentleman.github.io/matt/assets/cover_grandma.png
 ---
 
 
