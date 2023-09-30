@@ -2,7 +2,7 @@
 //LESSWRONG THEME//
 
 @use "./_theme_lessWrong.scss";
-
+@use "./_theme_tufte.scss";
 ///////////////
 //OVERALL CSS//
 ///////////////
@@ -93,133 +93,6 @@ img.cover-image {
   font-size: 1rem;
 }
 
-///////////
-// TUFTE //
-///////////
-body {
-  counter-reset: sidenote-counter;
-}
-// sidebar
-.sidenote,
-.marginnote {
-    // float: right;
-    // clear: right;
-    // margin-right: -60%;
-    // width: 50%;
-    // margin-top: 0.3rem;
-    // margin-bottom: 0;
-    // font-size: 1.1rem;
-    // line-height: 1.3;
-    // vertical-align: baseline;
-    // position: relative;
-    display: none;
-}
-
-.sidenote-number {
-    counter-increment: sidenote-counter;
-    font-size: 1rem;
-    top: -0.2rem;
-    left: 0.1rem;
-    position: relative;
-    vertical-align: baseline;
-    color:#5f9b65;
-}
-
-.sidenote-number:after,
-.sidenote-number:before,
-.sidenote:before {
-    font-family: et-book-roman-old-style;
-    position: relative;
-    vertical-align: baseline;
-    color:#5f9b65;
-}
-.sidenote-number:before {
-  content: "[";
-  font-size: 1rem;
-  top: -0.3rem !important;
-  right: 0.01rem;
-}
-.sidenote-number:after {
-    content: "]";
-    font-size: 1rem;
-    top: -0.3rem;
-    left: 0.01rem;
-}
-
-.sidenote:before {
-    // content: counter(sidenote-counter) " ";
-    font-size: 1rem;
-    top: -0.5rem;
-}
-
-blockquote .sidenote,
-blockquote .marginnote {
-    margin-right: -82%;
-    min-width: 59%;
-    text-align: left;
-}
-
-.marginnote > code,
-.sidenote > code {
-    font-size: 1rem;
-}
-
-
-input.margin-toggle {
-  display: none;
-}
-
-label.sidenote-number {
-  display: inline-block;
-  max-height: 2rem; /* should be less than or equal to paragraph line-height */
-}
-
-label.margin-toggle:not(.sidenote-number) {
-  display: inline;
-}
-
-.margin-toggle:checked + .sidenote,
-.margin-toggle:checked + .marginnote {
-      display: block;
-      float: left;
-      left: 1rem;
-      clear: both;
-      width: 95%;
-      margin: 1rem 2.5%;
-      vertical-align: baseline;
-      position: relative;
-  }
-
-label {
-    cursor: pointer;
-}
-
-@media (max-width: 760px) {
-  label.margin-toggle:not(.sidenote-number) {
-    display: inline;
-  }
-
-  // .sidenote,
-  // .marginnote {
-  //     display: none;
-  // }
-
-  // .margin-toggle:checked + .sidenote,
-  // .margin-toggle:checked + .marginnote {
-  //     display: block;
-  //     float: left;
-  //     left: 1rem;
-  //     clear: both;
-  //     width: 95%;
-  //     margin: 1rem 2.5%;
-  //     vertical-align: baseline;
-  //     position: relative;
-  // }
-
-  // label {
-  //     cursor: pointer;
-  // }
-}
 
 
 

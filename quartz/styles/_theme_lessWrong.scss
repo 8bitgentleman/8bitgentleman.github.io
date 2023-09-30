@@ -2,6 +2,7 @@
 /////////////
 //LESSWRONT//
 ////////////
+$primary-green: #5f9b65;
 @font-face {
     font-family: 'Warnock Pro';
     src: url('fonts/Warnock Pro Regular.otf') format('opentype');
@@ -50,12 +51,58 @@
     font-weight: 400 !important;
     font-family: 'Warnock Pro', serif !important;
   }
+  
+  html[saved-theme="dark"] {
+    h1,h2,h3{
+      color:#e8e8e8 !important;
+    }
+  }
+  h2 {
+    font-size: 36px !important;
+  }
   h2 {
     font-size: 26px !important;
   }
-  
+  h3 {
+    font-size: 20px !important;
+  }
+
+//  regular blockquotes
+  blockquote{
+    border-left: 3px solid #505050 !important;
+  }
+  .callout[data-callout=info], .callout[data-callout=todo]{
+    --color:#5f9b65 !important;
+    --color:#5f9b65 !important;
+  }
+  blockquote[data-callout="quote"]{
+    .callout-title-inner{
+      // display:none;
+    }
+  }
+  .callout-title{
+    >.callout-title-inner{
+      font-weight:inherit;
+      font-style: italic;
+      >p{
+        color:var(--darkgray) !important;
+      }
+    }
+  }
+  html[saved-theme="dark"] {
+    .callout-icon{
+      color:$primary-green;
+    }
+  }
+  html[saved-theme="dark"] {
+    input[type=checkbox]:checked{
+      background-color:$primary-green ;
+      color:$primary-green ;
+      border-color: $primary-green;
+    }
+  }
   a.internal{
-    color:#5f9b65;
+    color:$primary-green;
     background-color: transparent !important;
     font-weight: 400 !important;
   }
@@ -85,12 +132,15 @@
   }
     // page title
   .page-title {
-    border-left: 4px double #5f9b65;
+    border-left: 4px double $primary-green;
   }
   html[saved-theme="dark"] .page-title {
-    border-left: 4px double #5f9b65;
-    border-bottom:4px solid #5f9b65;
-    color: #5f9b65 !important;
+    border-left: 4px double var(--darkgray);
+    border-bottom:4px solid $primary-green;
+    
+    > a{
+      color: $primary-green;
+    }
   }
   // page popovers //
   a.internal:not(.tag-link) {

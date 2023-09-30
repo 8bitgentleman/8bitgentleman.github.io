@@ -10,6 +10,7 @@ tags:
   - Garden
 Priority Level: 5
 enableToc: true
+date: 2020-08-05
 ---
 # Preamble
 We've all been in unproductive conversations, unproductive meetings, unproductive arguments where no one can agree and everyone seems to be talking past each other. When you're mired within these situations it can seem like there is no clear way out, like the only way out is for everyone to acquiesce or fall in line.
@@ -54,14 +55,12 @@ It's also important to keep in mind that doing this in real time during an argum
 Nothing comes from nothing.
 
 This is your starting point. Agreement can only come from common ground and can only move forward once each party accepts the base reality of a conversation.
-<div >
+<div>
     <div style="width: 50%; float: left;">
-        <div style="height: 50%;">(By base reality here I don't mean the laws of physics I am talking about a common agreed upon foundation of facts that can be built upon.)</div>
-        </br>
-        <div style="height: 50%;">At its essence that's what this type of communication tries to do; explicitly establish a base reality for a conversation. This typically needs to be done at several scales; at a macro-level for the entire conversation and continuously at a micro-level for individual points of a conversation</div>
+        <p style="height: 50%;">(By base reality here I don't mean the laws of physics I am talking about a common agreed upon foundation of facts that can be built upon.)</p>
+        <p style="height: 50%;">At its essence that's what this type of communication tries to do; explicitly establish a base reality for a conversation. This typically needs to be done at several scales; at a macro-level for the entire conversation and continuously at a micro-level for individual points of a conversation</p>
     </div >
-    <!-- <div style="width: 50%; float: left;"></div> -->
-    <div style="width: 50%; float: right;"> <img style="float: right;margin-top: 0;margin-bottom: 2em;" src="https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FyWHNW_3DWn.png?alt=media&token=7e24dc09-9bd9-4fb9-be58-707c6b89b26b" alt="drawing" width="300"/> </div>
+    <div style="width: 35%; float: right;"> <img style="float: right;margin-top: 0;margin-bottom: 2em;" src="https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FyWHNW_3DWn.png?alt=media&token=7e24dc09-9bd9-4fb9-be58-707c6b89b26b" alt="drawing" width="300"/> </div>
 </div>
 <hr >
 <div ></div >
@@ -108,13 +107,14 @@ To find common ground you must be able or at least try to intuit where a person 
 
 Very often disagreements aren't about the actual topic you are discussing. Maybe that person got burned on the deadline for their last project. Maybe they have more in their plate than than can handle. If you can find that unspoken root concern and bring it to light ( or get the other person to bring it to light ) you can work as a group to address them. The best compromises leave everyone equal parts happy and {{or: frustrated. |tense.}}
 
-[[>]] "Fleeting mental images, unspoken flinches, desires acted upon without acknowledgement—these account for as much of ourselves as words." 	
+> [!quote] "Fleeting mental images, unspoken flinches, desires acted upon without acknowledgement—these account for as much of ourselves as words."
 
 This may seem daunting but trust me it's far more straightforward than you imagine.
 
-[[>]] "Intuition is nothing more and nothing less than recognition"
+> [!quote] "Intuition is nothing more and nothing less than recognition"
 
-[[>]] "Our everyday intuitive abilities are no less marvelous than the striking insights of an experienced firefighter or physician-only more common"
+> [!quote]"Our everyday intuitive abilities are no less marvelous than the striking insights of an experienced firefighter or physician-only more common"
+
 ### Take three steps back
 How do you do this? Taking your observations ( word choice, body language ) and what you know about a person ( demeanor, disposition ) and ask yourself:
 
