@@ -1,3 +1,7 @@
+---
+title: test
+description: A description here instead of the regular page?
+---
 test text ^DYQ86Vzzz
 
 Regular text

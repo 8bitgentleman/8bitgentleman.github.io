@@ -67,7 +67,7 @@ Text Styling
     - [External Alias](https://www.usgbc.org/education/sessions/day-1-study-plan-10411494)
     - {{alias:  Clojure Block Alias}}
     - {{alias: [[Theme Tester]] Clojure Page Alias}}
-    - This is a paragraph with several types of tags and aliases [Block Alias](((JF3iFJPKu))) [Basic Alias]([[Theme Tester]]) #test [External Alias](https://www.usgbc.org/education/sessions/day-1-study-plan-10411494) [[Theme Tester]] #[[mental health]]
+    - This is a paragraph with several types of tags and aliases [Block Alias](((JF3iFJPKu))) [Basic Alias]([[Theme Tester]]) [[test]] [External Alias](https://www.usgbc.org/education/sessions/day-1-study-plan-10411494) [[Theme Tester]] #[[mental health]]
     - metadata:: www.google.com
     - Tags
         - #[[exercise]]
