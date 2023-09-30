@@ -11,7 +11,16 @@ Block reference [[index#^T0xmwnBMP]]
 [[index#That being said, here are some good pages to start at:|Anchor]]
 
 [[How to Be the Greatest Improviser on Earth#^971708|know, care, say]]
+
 ### Table
+- Obsidian
+
+| another table | another column    |
+|---------------|-------------------|
+| more subtext  | even more subtext |
+| more subtext  | even more subtext |
+
+Test 1
 - {{[[table]]}} zz
     - another table
         - another column

@@ -14,24 +14,37 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     theme: {
       typography: {
-        header: "Montserrat Alternates",
+        
         // body: "Oswald Regular",
         // header: "Abril Fatface",
         // body: "Lato",
         // header: "Homemade Apple",
-        body: "Raleway",
+        // header: "Montserrat Alternates",
+        // body: "Raleway",
+        header: "Cabin",
+        body: "Cabin",
         code: "IBM Plex Mono",
       },
       colors: {
+        // lightMode: {
+        //   light: "#faf8f8",//background
+        //   lightgray: "#e5e5e5",
+        //   gray: "#b8b8b8", //accents metadata & DONE text
+        //   darkgray: "#4e4e4e",//text and icons
+        //   dark: "#2b2b2b", //page title and heading
+        //   secondary: "#284b63",//#tag & [[page]] hover text
+        //   tertiary: "#84a59d",//#tag & [[page]] hover text
+        //   highlight: "rgba(143, 159, 169, 0.15)", //#tag & [[page]] bg
+        // },
         lightMode: {
-          light: "#faf8f8",
+          light: "#ffffff",//background
           lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          gray: "#757575", //accents metadata & DONE text
+          darkgray: "#4e4e4e",//text and icons
+          dark: "#2b2b2b", //page title and heading
+          secondary: "#5f9b65",//#tag & [[page]] hover text
+          tertiary: "#5f9b6550",//#tag & [[page]] hover text
+          highlight: "rgba(143, 159, 169, 0.15)", //#tag & [[page]] bg
         },
         darkMode: {
           light: "#161618",

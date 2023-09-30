@@ -1,32 +1,32 @@
-- Todo
-    - {{[[TODO]]}}  unchecked
-    - {{[[DONE]]}}  checked
-- Text Styling
-    - **Bold**
-    - __Italics__
-    - Highlights ^^of some^^ words
-    - this one, ~~not this one~~
-    - # H1
-        - sub text
-    - ## H2
-        - sub text
-    - ### H3
-        - sub text
-    - ---
-    - View as document
-        this is a paragraph
-        this is another paragraph
-    - View as numbered list
-        1. one
-        2. two
-        3. three
-    - Text Alignments
-        - Left
-        - Center
-        - Right
-        - Justify
-    - Text Reactions
-        - great idea
+Todo
+- {{[[TODO]]}}  unchecked
+- {{[[DONE]]}}  checked
+Text Styling
+- **Bold**
+- __Italics__
+- Highlights ^^of some^^ words
+- this one, ~~not this one~~
+- # H1
+    - sub text
+- ## H2
+    - sub text
+- ### H3
+    - sub text
+- ---
+- View as document
+    this is a paragraph
+    this is another paragraph
+- View as numbered list
+    1. one
+    2. two
+    3. three
+- Text Alignments
+    - Left
+    - Center
+    - Right
+    - Justify
+- Text Reactions
+    - great idea
 - Versoning
     - First
     - in-line  {{or: options | versioning}}

@@ -1,4 +1,11 @@
 // put your custom CSS here!
+//LESSWRONG THEME//
+
+@use "./_theme_lessWrong.scss";
+
+///////////////
+//OVERALL CSS//
+///////////////
 
 // specific tag stying
 a[data-tag="acorn"]{
@@ -15,6 +22,7 @@ a[data-tag="seedlings"]{
   font-weight: 600;
   line-height: 1.4em;
 }
+
 a[data-tag="seedlings"]:before {
   content: '🌱 ';
 }
@@ -64,6 +72,8 @@ select.roam-or-component{
   color: transparent;
   text-shadow: 0 0 0 var(--secondary);
   content: "↗";
+  font-size: 10px;
+  position: absolute;
 }
 article a.internal:not(.tag-link):not([aria-hidden="true"]):after {
   content: "\B0";
@@ -108,24 +118,32 @@ body {
 .sidenote-number {
     counter-increment: sidenote-counter;
     font-size: 1rem;
-    top: -0.5rem;
+    top: -0.2rem;
     left: 0.1rem;
     position: relative;
     vertical-align: baseline;
+    color:#5f9b65;
 }
 
 .sidenote-number:after,
+.sidenote-number:before,
 .sidenote:before {
     font-family: et-book-roman-old-style;
     position: relative;
     vertical-align: baseline;
+    color:#5f9b65;
 }
-
+.sidenote-number:before {
+  content: "[";
+  font-size: 1rem;
+  top: -0.3rem !important;
+  right: 0.01rem;
+}
 .sidenote-number:after {
-    // content: counter(sidenote-counter);
+    content: "]";
     font-size: 1rem;
-    top: -0.5rem;
-    left: 0.1rem;
+    top: -0.3rem;
+    left: 0.01rem;
 }
 
 .sidenote:before {
@@ -202,3 +220,6 @@ label {
   //     cursor: pointer;
   // }
 }
+
+
+
