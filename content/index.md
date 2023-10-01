@@ -10,6 +10,10 @@ These notes are a second attempt at a [[Digital Garden]] and as such are a littl
 > 
 > I'm just a person trying to figure things out; thinking and learning [[Work with the garage door up|with the garage door up]]. As such the thoughts here should be viewed as incomplete, inelegant and extremely malleable.  Take a look at all of the things I am curious about [[What am I Curious About|here]].
 
+Things I will do here include:
+- Not use correct sentence structure
+- use ﬆrange ligatures like æ instead of `ae` for no reason other than liking how it looks
+
 ### That being said, here are some good pages to start at:
 All the bits of my #writing on their way to becoming [[Evergreen Notes]]
 -  [[for grandma]]

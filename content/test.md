@@ -8,8 +8,26 @@ Regular text
 Block reference [[index#^T0xmwnBMP]]
 
 [[index#block-ref|^T0xmwnBMP]]
+# H1 pure markdown 
 
-[[How to communicate with empathy and collaboration#^f1e4cb]]
+some text
+
+???
+2023
+was unable to finish my first real coding commission for [[App/Obsidian.md]]
+<<<
+This is in part due to extenuating circumstances (ie my grandmother passed away suddenly) but also due to not understanding my own limitations? it also just wasn't very fun to work with something. I've been off more than I could chew and don't really love arbitrary deadlines. oh and work got insane randomly at the same time. truly a bad couple weeks
+!!!
+
+???
+2022
+Missed or didn't understand the door width designations for glass doors at #work . The sub had gone rogue and changed all the doors putting nearly every single glass door on the project out of ADA compliance.
+!!!
+
+???
+2021
+Was rejected for a position at [[Roam Research]]
+!!!
 
 
 [[index#That being said, here are some good pages to start at:|Anchor]]
@@ -23,6 +41,14 @@ Block reference [[index#^T0xmwnBMP]]
 |---------------|-------------------|
 | more subtext  | even more subtext |
 | more subtext  | even more subtext |
+
+### Table
+- Obsidian
+
+| YEAR | FAILURE | INFO |
+|---------------|-------------------|-------------------|
+| 2023  | was unable to finish my first real coding commission for [[App/Obsidian.md]] |  [[test#^L5wGbkaKW|very]]
+
 
 Test 1
 - {{[[table]]}} zz
@@ -88,3 +114,4 @@ A footnote can also have multiple lines[^2].
 
 > [!quote]-
 > Lorem ipsum dolor sit amet
+

@@ -55,7 +55,7 @@ export const RoamTables: QuartzTransformerPlugin<Partial<Options> | undefined> =
                 if (parent && parent.children && parent.children.length > 0) {
                   // Extract table data
                   htmlTable += extractTableData(parent, true);
-                  console.log(node);
+                  // console.log(node);
                   htmlTable += '</table>';
                   
                   node.type = "html";
