@@ -17,7 +17,6 @@ import Footer from "./Footer"
 import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
-import Status from "./EssayStatus"
 import CoverImage from "./CoverImage"
 export {
   ArticleTitle,
@@ -39,6 +38,5 @@ export {
   MobileOnly,
   RecentNotes,
   NotFound,
-  Status,
   CoverImage,
 }

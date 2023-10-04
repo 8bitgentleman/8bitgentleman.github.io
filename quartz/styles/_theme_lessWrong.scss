@@ -223,3 +223,18 @@ $primary-green: #5f9b65;
       display:none;
     }
   }
+
+  // numbered list
+  article ol li {
+    padding-left:10px;
+  }
+
+  .content-meta{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    align-items: baseline;
+    >span{
+
+    }
+}

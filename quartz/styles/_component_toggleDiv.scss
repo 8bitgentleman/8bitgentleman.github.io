@@ -1,7 +1,8 @@
 .toggle-table {
-    border: 1px solid #e0e0e0;
+    // border-top: 1px solid #e0e0e0;
+    // border-right: 1px solid #e0e0e0;
+    // border-left: 1px solid #e0e0e0;
     border-radius: 4px;
-    font-family: GreekFallback,Calibri,"Gill Sans","Gill Sans MT",Myriad Pro,Myriad,"Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .parent-div:has(.hidden-div) {
     
@@ -13,12 +14,14 @@
     padding: 16px 16px 8px;
 	
 }
-.parent-div{
-    border-bottom: 1px solid #e0e0e0;
-}
+.parent-div:first-of-type {
+    border-top: 1px solid #e0e0e0;
+  }
 .visible-div {
     display: flex;
-    
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
 }
 
 .visible-div span:first-child {
@@ -28,13 +31,29 @@
 }
 
 .hidden-div {
-    border-top: 1px solid #e0e0e0;
+    // border-top: 1px solid #e0e0e0;
     display: none;
     background-color: #ececec53;
     padding:10px;
     color:#6a6a6a;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
 }
 
 .toggle-checkbox:checked ~ .hidden-div {
     display: block;
 }
+
+.relative-container {
+    position: relative;
+  }
+  
+  .carrot-icon {
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .toggle-checkbox:checked ~ .visible-div .carrot-icon {
+    transform: rotate(90deg);
+  }

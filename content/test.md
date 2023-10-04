@@ -1,6 +1,7 @@
 ---
 title: test
 description: A description here instead of the regular page?
+Status: evergreen
 ---
 test text ^DYQ86Vzzz
 
@@ -8,7 +9,30 @@ Regular text
 Block reference [[index#^T0xmwnBMP]]
 
 [[index#block-ref|^T0xmwnBMP]]
-# H1 pure markdown 
+
+
+# H1 Toggle markdown example
+
+???
+2023
+Something I did
+<<<
+Hidden Explaining paragraphs
+!!!
+
+???
+2023
+Something I did without explainer text
+!!!
+
+???
+2022
+Something I did
+<<<
+Hidden Explainer
+!!!
+
+## H2 other stuff
 
 some text
 
@@ -43,12 +67,6 @@ Was rejected for a position at [[Roam Research]]
 | more subtext  | even more subtext |
 
 ### Table
-- Obsidian
-
-| YEAR | FAILURE | INFO |
-|---------------|-------------------|-------------------|
-| 2023  | was unable to finish my first real coding commission for [[App/Obsidian.md]] |  [[test#^L5wGbkaKW|very]]
-
 
 Test 1
 - {{[[table]]}} zz
@@ -77,7 +95,13 @@ A footnote can also have multiple lines[^2].
 <br>
 <br>
 
+> [!info]- 2023 -> some other stuff here
+> 
+> Info inside here
 
+> [!note]- Title
+> 
+> This is a note!
 
 > [!info] Title
 > 

@@ -1,12 +1,16 @@
 import { formatDate, getDate } from "./Date"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
+import { pathToRoot, slugTag } from "../util/path"
 
 export default (() => {
   function ContentMetadata({ cfg, fileData }: QuartzComponentProps) {
     const text = fileData.text
+    const status = fileData.frontmatter?.Status
+    const baseDir = pathToRoot(fileData.slug!);
+  
     if (text) {
-      const segments: string[] = []
+      const segments: (string | JSX.Element)[] = [];
       const { text: timeTaken, words: _words } = readingTime(text)
 
       if (fileData.dates) {
@@ -14,10 +18,21 @@ export default (() => {
       }
 
       segments.push(timeTaken)
-      const content = fileData.frontmatter?.URL
-        ? <p class="content-meta">{segments.join(", ")} <a class="external source-url" target="_blank" href={fileData.frontmatter.URL} ></a></p>
-        : <p class="content-meta">{segments.join(", ")}</p>;
+      if (status) {
+        const display = `#${status}`
+        const linkDest = baseDir + `/tags/${slugTag(status)}`
+        
+        segments.push(<span className="essay-status">
+          <strong key="statusLabel">Status:</strong>
+          <a key="statusLink" href={linkDest} className="internal essay-status" data-tag={status}>{display}</a>
+        </span>);
+      }
 
+      const content = fileData.frontmatter?.URL
+        ? <p className="content-meta">{segments.map((segment, index) => <span key={index}>{segment}</span>)}<a className="external source-url" target="_blank" href={fileData.frontmatter.URL} ></a></p>
+        : <p className="content-meta">{segments.map((segment, index) => <span key={index}>{segment}</span>)}</p>;
+        // console.log(JSON.stringify(content, null, 2))
+      
       return content;
     } else {
       return null
@@ -38,4 +53,4 @@ export default (() => {
   }
   `
   return ContentMetadata
-}) satisfies QuartzComponentConstructor
+}) as QuartzComponentConstructor

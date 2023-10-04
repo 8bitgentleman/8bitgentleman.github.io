@@ -6,7 +6,6 @@ import { JSResourceToScriptElement, StaticResources } from "../util/resources"
 import { FullSlug, RelativeURL, joinSegments } from "../util/path"
 import { visit } from "unist-util-visit"
 import { Root, Element } from "hast"
-import CoverImage from "./CoverImage"
 import CoverImageConstructor from "./CoverImage"
 
 interface RenderComponents {
