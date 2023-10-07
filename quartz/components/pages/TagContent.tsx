@@ -24,7 +24,7 @@ function TagContent(props: QuartzComponentProps) {
   //   )
     const allPagesWithTag = (tag: string) =>
     allFiles.filter((file) => {
-      const tags = (file.frontmatter?.tags ?? []).concat(file.frontmatter?.Status ? [file.frontmatter.Status] : []);
+      const tags = (file.frontmatter?.tags ?? []).concat(file.frontmatter?.status ? [file.frontmatter.status] : []);
       return tags.flatMap(getAllSegmentPrefixes).includes(tag);
     });
 

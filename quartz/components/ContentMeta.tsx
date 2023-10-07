@@ -6,7 +6,7 @@ import { pathToRoot, slugTag } from "../util/path"
 export default (() => {
   function ContentMetadata({ cfg, fileData }: QuartzComponentProps) {
     const text = fileData.text
-    const status = fileData.frontmatter?.Status
+    const status = fileData.frontmatter?.status
     const baseDir = pathToRoot(fileData.slug!);
   
     if (text) {
