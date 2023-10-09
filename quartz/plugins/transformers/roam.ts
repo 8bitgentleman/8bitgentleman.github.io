@@ -1,4 +1,5 @@
 import { QuartzTransformerPlugin } from "../types"
+import script from "./scripts/toc.inline"
 
 export interface Options {
   /** Replace {{ or:ONE|TWO|THREE }} with html select */
@@ -49,16 +50,21 @@ export const RoamFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> | un
   userOpts,
 ) => {
   const opts = { ...defaultOptions, ...userOpts }
+
   return {
     name: "RoamFlavoredMarkdown",
     textTransform(_ctx, src) {
       if (opts.orComponent) {
         src = src.toString()
         src = src.replaceAll(orRegex, (value, ...capture) => {
-          const [match, text] = capture
+          const [match, text] = capture          
           const options = match.split("|")
-          const dropdown = `<select class="roam-or-component">${options.map((option: string) => `<option>${option}</option>`).join("")}</select>`;
-          return dropdown;
+          const id = Math.random().toString(36).substring(2, 15); // Generate a unique ID
+          // const dropdown = `<select class="roam-or-component">${options.map((option: string) => `<option>${option}</option>`).join("")}</select>`;
+          // return dropdown;
+          const carousel = `<span class="carousel ${id}">${options.map((option:String, index:String) => `<span class="carousel-item ${index === 0 ? 'active' : ''}">${option}</span>`).join("")}<button class="carousel-button prev"> </button><button class="carousel-button next"> </button></span>`;
+
+          return carousel;
         })
       }
       if (opts.TODOComponent) {

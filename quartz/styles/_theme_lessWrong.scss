@@ -20,7 +20,7 @@ $primary-green: #5f9b65;
   html[saved-theme="dark"] .article-title{
     color:var(--darkgray) !important; 
   }
-  p{
+  p, span{
     font-size:18px;
     font-family: 'Warnock Pro', serif !important;
   }
