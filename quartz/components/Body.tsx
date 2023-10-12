@@ -8,11 +8,6 @@ function Body({ children }: QuartzComponentProps) {
   return <div id="quartz-body">{children}</div>
 }
 
-Body.afterDOMLoaded = () => {
-  clipboardScript();
-  carouselScript();
-}
-
-Body.css = clipboardStyle
+Body.afterDOMLoaded = `${clipboardScript}\n${carouselScript}`;
 
 export default (() => Body) satisfies QuartzComponentConstructor
