@@ -1,11 +1,8 @@
 ---
 title: Evergreen Notes
 date: 2020-06-21
-author: [[Person/Andy Matuschak]], [[Person/Matt Brockwell]], [[Person/Maggie Appleton]]
 tags:
-  - [[note
-  - taking]]
-  - 
+  - note taking
   - article
 ---
 
