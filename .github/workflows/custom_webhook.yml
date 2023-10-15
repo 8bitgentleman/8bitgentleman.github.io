@@ -1,0 +1,43 @@
+name: Custom Webhook
+
+on:
+  repository_dispatch:
+    types: [custom-event]
+
+jobs:
+  process-json:
+    runs-on: ubuntu-latest
+    env:
+      ROAM_BACKEND_TOKEN: ${{ secrets.ROAM_BACKEND_TOKEN_MATTVOGEL }}
+      TS_NODE_COMPILER_OPTIONS: '{ "module": "commonjs" }'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+            token: ${{ secrets.PAT }} # Use your PAT here
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.13' # replace with your required Node.js version
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Print client payload
+        run: echo ${{ github.event.client_payload }}
+
+      - name: Set client payload as env variables
+        run: |
+          echo "PAGES=$(IFS=,; echo "${{ join(github.event.client_payload.pages, ',') }}")" >> $GITHUB_ENV
+          echo "START=$(IFS=,; echo "${{ github.event.client_payload.start }}")" >> $GITHUB_ENV
+          echo "PRIVATE=$(IFS=,; echo "${{ join(github.event.client_payload.private, ',') }}")" >> $GITHUB_ENV
+    
+      - name: Run TypeScript Script
+        run: npx tsx roam/index.ts
+
+      - name: Commit Changes
+        uses: elstudio/actions-js-build/commit@v4
+        with:
+          commitMessage: Automated commit ${{ github.run_number }}

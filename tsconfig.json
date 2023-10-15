@@ -13,8 +13,9 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
+    "typeRoots": ["./types", "./node_modules/@types"],
   },
-  "include": ["**/*.ts", "**/*.tsx", "./package.json"],
+  "include": ["**/*.ts", "**/*.tsx", "./package.json", "roam"],
   "exclude": ["build/**/*.d.ts"]
 }
