@@ -23,7 +23,7 @@ jobs:
           node-version: '18.14' # replace with your required Node.js version
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Print client payload
         run: echo ${{ github.event.client_payload }}
