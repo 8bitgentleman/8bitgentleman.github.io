@@ -3,9 +3,7 @@ title: Evergreen Notes
 date: 2020-06-21
 tags:
   - note taking
-  - article
 ---
-
 
  Evergreen note taking is a style of note taking associated with networked though. Evergreen notes, like an evergreen tree, are 'designed' to accumulate usefulness over time
 

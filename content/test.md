@@ -9,6 +9,7 @@ Regular text
 Block reference [[index#^T0xmwnBMP]]
 
 [[index#block-ref|^T0xmwnBMP]]
+			
 
 With some effort {{or:You|One}} can you write a transformer plugin to parse the markdown file for variations of text like  {{or:these here|and this|and this too}}.
 

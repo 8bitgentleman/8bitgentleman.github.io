@@ -25,34 +25,4 @@ status: budding
 4.  I read (and have read) a LOT in many different styles, eras, and genres.
 
 5.  I spend time in many vastly different social circles; ones that each have very specific lingo and ways of communicating.  Blending these speech patterns can result in fun new turns of phrase (see # 2).
-
-
     - How a designer communicates and talks if very different from how a [[Company/Rensselaer Polytechnic Institute|RPI]] alum communicates which is also different from how an [[improv|improviser]] communicates.
-
-
-
- ***Points I want to make***
-
-
-- have run into an odd anti-intellectualism and anger when I use weird words
-
-- This tweet haunts me
-
-
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FKDHBBH48y3image?alt=media&token=0c6fc35f-992a-4056-a5ee-8d32a7b8cd45)
-
-    - __'”Write like you talk” is good advice, but it’s limiting if you follow it too closely.<br><br>Here’s what I recommend instead:<br><br>1) Maximize both word clarity and word diversity.<br><br>2) Add freshness to your writing by pulling from the “words people know but don’t say” bucket.'__
-
-
-        - https://twitter.com/david_perell/status/1305566164005908480
-
-
-
-- That Words are keys [[Ted Talk]]
-
-
-    - {{[[video]]: https://www.youtube.com/watch?v=esD6aaIjhek}}
-
-
-
-
