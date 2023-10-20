@@ -171,10 +171,9 @@ function resolveBlockRef(blockLocations: Map<string, BlockInfo>, sourceBlockUID:
   return strippedSourceBlockString
 }
 
-function preprocess(pages: RoamPage[]): [Map<string, BlockInfo>, Map<string, BlockInfo>] {
+function preprocess(pages: RoamPage[]): Map<string, BlockInfo> {
   // preprocess/map the graph so each block can be quickly found 
   const blockLocations: Map<string, BlockInfo> = new Map();
-  const toPostProcessblockLocations: Map<string, BlockInfo> = new Map();
 
   function processBlock(page: RoamPage, block: RoamBlock) {
       if (block[':block/uid']) {
@@ -186,10 +185,6 @@ function preprocess(pages: RoamPage[]): [Map<string, BlockInfo>, Map<string, Blo
               blockString: block[':block/string'] || '', // Ensure block.string is defined
           };
 
-          const blockRefRegex = /.*?(\(\(.*?\)\)).*?/g;
-          if (blockRefRegex.test(info.blockString)) {
-              toPostProcessblockLocations.set(block[':block/uid'], info);
-          }
           blockLocations.set(block[':block/uid'], info);
       }
 
@@ -208,7 +203,7 @@ function preprocess(pages: RoamPage[]): [Map<string, BlockInfo>, Map<string, Blo
       }
   }
 
-  return [blockLocations, toPostProcessblockLocations];
+  return blockLocations;
 }
 
 function findPagesByTitles(pages: RoamPage[], titlesToFind: String[]): RoamPage[] {
@@ -256,7 +251,7 @@ const main = async (pages:String[]) => {
       console.log("~~pages downloaded");
       console.log("~~~~starting block preprocess");
       // PRE-PROCESS: map the blocks for easy lookup //
-      const [blockLocations, toPostProcess] = preprocess(allPages);
+      const blockLocations = preprocess(allPages);
       console.log("~~block preprocess finished");
 
       const filteredPages = findPagesByTitles(allPages, pages)
