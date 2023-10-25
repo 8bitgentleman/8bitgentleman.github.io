@@ -37,26 +37,27 @@ const config: QuartzConfig = {
         //   highlight: "rgba(143, 159, 169, 0.15)", //#tag & [[page]] bg
         // },
         lightMode: {
-          light: "rgb(255, 252, 240)",//background
-          lightgray: "rgb(230, 228, 217)", //borders
-          gray: "rgb(183, 181, 172)", // graph links, heavier borders, accents metadata & DONE text
+          light: "#FFFCF0",//background
+          lightgray: "#E6E4D9", //borders
+          gray: "#B7B5AC", // graph links, heavier borders, accents metadata & DONE text
           darkgray: "#4e4e4e",//body text and icons
           dark: "#2b2b2b", //page title, header text and icons
-          secondary: "rgb(209, 77, 65)",//link colour, current [[graph view|graph]] node
-          tertiary: "rgb(67, 133, 190)",//hover states and visited [[graph view|graph]] nodes
-          highlight: "rgb(230, 228, 217, .5)", //internal link background, highlighted text, [[syntax highlighting|highlighted lines of code]]
+          secondary: "#D14D41",//link colour, current [[graph view|graph]] node
+          tertiary: "#4385BE",//hover states and visited [[graph view|graph]] nodes
+          highlight: "#E6E4D950" //internal link background, highlighted text, [[syntax highlighting|highlighted lines of code]]
         },
         darkMode: {
-          light: "rgb(16, 15, 15)",
-          lightgray: "rgb(40, 39, 38)",
-          gray: "rgb(64, 62, 60)",
-          darkgray: "rgb(206, 205, 195)",
-          dark: "rgb(206, 205, 195)",
-          secondary: "rgb(209, 77, 65)",
-          tertiary: "rgb(67, 133, 190)",
-          highlight: "rgb(64, 62, 60, .15)",
+          light: "#100F0F",
+          lightgray: "#282726",
+          gray: "#403E3C",
+          darkgray: "#CECDC3",
+          dark: "#CECDC3",
+          secondary: "#D14D41",
+          tertiary: "#4385BE",
+          highlight: "#403E3C15"
         },
       },
+      
     },
   },
   plugins: {
