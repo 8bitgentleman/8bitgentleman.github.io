@@ -90,7 +90,12 @@ body {
   input.margin-toggle {
     display: none;
   }
-  
+  // make sure to avoid strike throughs
+  li:has(> input[type="checkbox"].margin-toggle:checked) {
+    text-decoration: inherit !important;
+    color: inherit !important;
+  }
+
   label.sidenote-number {
     display: inline-block;
     max-height: 2rem; /* should be less than or equal to paragraph line-height */
@@ -110,6 +115,7 @@ body {
         margin: 1rem 2.5%;
         vertical-align: baseline;
         position: relative;
+        color:var(--secondary);
     }
   
   label {
