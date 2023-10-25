@@ -1,5 +1,5 @@
 ---
-Status: budding
+status: budding
 Success Criteria:
   - ~~Stage 1 Success A draft for~~ [[Person/Helena Ng]]
   - Stage 2 Success Clarified draft for [[Person/Helena Ng]]
@@ -28,7 +28,7 @@ This essay is not about agreement or how to convince someone to your way of thin
 > 
 > --Karl Popper
 
-For any disagreement to be resolved everyone at the table needs to feel heard. By talking past each other, not listening to each other, or not agreeing on the base reality of the topic discussions are at an impasse and agreement is impossible. The only outcomes are spinning wheels or ^^acquiescence.^^
+For any disagreement to be resolved everyone at the table needs to feel heard. By talking past each other, not listening to each other, or not agreeing on the base reality of the topic discussions are at an impasse and agreement is impossible. The only outcomes are spinning wheels or acquiescence.
 
 It's quite simple to lose sight of this. To solve this a readjustment of priorities is necessary. Empathy is what drives this.
 
@@ -92,9 +92,9 @@ Don't know what to say without using 'I' or 'me'? Try these phrases
 ## Relearn how to listen.
 However good you think you are at listening, you're most likely wrong. Listening is a full body skill. Agreement and disagreement is not only in literal vocal agreement. How something is phrased can be a clue into what drove the person to say it.
 
-^^I really don't know how to teach this digitally. I learned just how in-depth listening can be while learning improv at the Upright Citizens Brigade in NYC. The next best thing to doing improv is watching improv so as an exercise when you have some time give this video a watch. ^^
+*I really don't know how to teach this digitally. I learned just how in-depth listening can be while learning improv at the Upright Citizens Brigade in NYC. The next best thing to doing improv is watching improv so as an exercise when you have some time give this video a watch. *
 - Pay special attention to the start of each new two person scene. One person initiates the scene with an idea, and the other person listens to understand the new world they have just walked into. The look for all kinds of clues about who the other person is, what kind of personality they have, where they are, what they are doing, what their relationship is, and even who they are themselves.
-{{[[video]]: https://www.youtube.com/watch?v=mTGAIvSj1oY}}
+- {{[[video]]: https://www.youtube.com/watch?v=mTGAIvSj1oY}}
         
 This is a particularly difficult skill to teach digitally where no ears are involved :P 
         

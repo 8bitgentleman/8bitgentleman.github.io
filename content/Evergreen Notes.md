@@ -1,6 +1,7 @@
 ---
 title: Evergreen Notes
 date: 2020-06-21
+status: evergreen
 tags:
   - note taking
 ---

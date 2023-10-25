@@ -9,8 +9,7 @@ tags:
 ---
 
 
-## Navigation through Design 
-
+# Navigation through Design 
 
 ### Embedded meaning behind styling
 
@@ -36,15 +35,13 @@ Aliases
 
 
 
-### Explorative Navigation
+## Explorative Navigation
 
 
-- Navigating through a typical website is an endless amount of clicking and new tab opening with everything seen before gone or no longer visible.
+Navigating through a typical website is an endless amount of clicking and new tab opening with everything seen before gone or no longer visible.
 
 
+With this site I'm trying to lower the barrier to putting ideas out into public and experimenting with way to create visual cues for the reader as to what is beyond the current page.
 
- With this site I'm trying to lower the barrier to putting ideas out into public and experimenting with way to create visual cues for the reader as to what is beyond the current page.
-
- Each different type of link I have styled differently as you can see above.
 
 

@@ -1,6 +1,6 @@
 // put your custom CSS here!
 //LESSWRONG THEME//
-
+@use "./variables.scss" as *;
 @use "./_theme_lessWrong.scss";
 @use "./_theme_tufte.scss";
 @use "./component_carousel.scss";
@@ -27,6 +27,8 @@ html[saved-theme="dark"] body{
 .content-meta>span{
   margin-right: 10px;
 }
+
+
 // specific tag stying
 a[data-tag="acorn"]:not(.essay-status){
   color: rgb(218, 112, 44) !important;
@@ -100,22 +102,46 @@ select.roam-or-component{
     padding: 0 .5em;
   }
 
-// external links
-.external{
-  padding-right:10px;
-}
-.external::after {
-  fill: var(--gray);
-  padding-left: 2px;
-  color: transparent;
-  text-shadow: 0 0 0 var(--secondary);
-  content: "↗";
-  font-size: 10px;
-  position: absolute;
-}
-article a.internal:not(.tag-link):not([aria-hidden="true"]):after {
-  content: "\B0";
-  font-size:20px;
+  
+  
+article {
+  a{
+    color:inherit; 
+  }
+  
+  a.internal {
+    // font-family: 'Burrow Serif', serif;
+    font-variation-settings: 'wght' 100;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    &:not(.tag-link):not([aria-hidden="true"]):after {
+      content: "\B0";
+      font-size:20px;
+      color:var(--secondary);
+    }
+    &:hover {
+      text-decoration: none;
+      font-variation-settings: 'wght' 700;
+    }
+    .hash{
+      color:var(--secondary);
+    }
+      
+    
+  }
+  // external links
+  a.external {
+    padding-right: 10px;
+  
+    &:after {
+      content: "↗";
+      font-size: 10px;
+      color: transparent;
+      text-shadow: 0 0 0 var(--secondary);
+      position: absolute;
+      margin-left: 2px; // Use margin instead of padding-left
+    }
+
+  }
 }
 img.cover-image {
   height: 100px !important;
@@ -140,17 +166,14 @@ ul.tags{
 body[data-slug="Theme-Tester"] .article-title{
   font-family: Italiana;
 }
-h1 {
-  // font-family: 'Burrow Serif', serif;
-  font-variation-settings: 'wght' 100;
-  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+// only center headings on mobile
+@media all and (max-width: $fullPageWidth) {
+  article h1,
+  article h2,
+  article h3{
+    text-align:center;
+  }
 }
-
-h1:hover {
-  text-decoration: none;
-  font-variation-settings: 'wght' 700;
-}
-
-
 
 

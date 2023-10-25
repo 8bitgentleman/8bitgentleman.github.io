@@ -397,34 +397,34 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
 
       if (opts.parseTags) {
         plugins.push(() => {
-          return (tree: Root, file) => {
-            const base = pathToRoot(file.data.slug!)
-            findAndReplace(tree, tagRegex, (_value: string, tag: string) => {
-              tag = slugTag(tag)
-              if (file.data.frontmatter && !file.data.frontmatter.tags.includes(tag)) {
-                file.data.frontmatter.tags.push(tag)
-              }
-
-              return {
-                type: "link",
-                url: base + `/tags/${tag}`,
-                data: {
-                  hProperties: {
-                    className: ["tag-link"],
-                    dataTag:tag,
-                  },
-                },
-                children: [
-                  {
-                    type: "text",
-                    value: `#${tag}`,
-                  },
-                ],
-              }
-            })
-          }
+            return (tree: Root, file) => {
+                const base = pathToRoot(file.data.slug!)
+                findAndReplace(tree, tagRegex, (_value: string, tag: string) => {
+                    tag = slugTag(tag)
+                    if (file.data.frontmatter && !file.data.frontmatter.tags.includes(tag)) {
+                        file.data.frontmatter.tags.push(tag)
+                    }
+    
+                    return {
+                        type: "link",
+                        url: base + `/tags/${tag}`,
+                        data: {
+                            hProperties: {
+                                className: ["tag-link"],
+                                dataTag:tag,
+                            },
+                        },
+                        children: [
+                            {
+                                type: "html",
+                                value: `<span class="hash">#</span>${tag}`,
+                            },
+                        ],
+                    }
+                })
+            }
         })
-      }
+    }
       return plugins
     },
     htmlPlugins() {
