@@ -11,12 +11,12 @@
 
 .carousel-item.active {
     display: block;
-	background:#e5e5e570;
+	background:var(--lightgray);
 	opacity: 1;
     padding:0 10px;
 }
 :root[saved-theme=dark] .carousel-item.active {
-    background:#39363970 !important;
+    background:var(--lightgray) !important;
 }
 .carousel-button {
     position: absolute;
@@ -24,7 +24,7 @@
     bottom: 0;
     transition: opacity 0.3s;
     opacity: 0;
-    background-color: #5f9b65;
+    background-color: var(--secondary);
     border: none;
 }
 

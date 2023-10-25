@@ -13,13 +13,13 @@ tags:
 ---
 quotes::
 # Introduction
-- "Our everyday intuitive abilities are no less marvelous than the striking insights of an experienced firefighter or physician-only more common"
-    - Tags::#intuition
+__"Our everyday intuitive abilities are no less marvelous than the striking insights of an experienced firefighter or physician-only more common"__
+- Tags::#intuition
     - Chapter:: Introduction
 - "Intuition is nothing more and nothing less than recognition"
-    - Tags::#intuition
-    - Chapter:: Introduction
-- __it is much easier to strive for perfection when you are never bored__
-- __Luck plays a large role in every story of success__
-    - Tags:: #[[stories]]
-- __This is the essence of intuitive heuristics: when faced with a difficult question, we often answer an easier one instead, usually without noticing the substitution__
+- Tags::#intuition
+- Chapter:: Introduction
+__it is much easier to strive for perfection when you are never bored__
+__Luck plays a large role in every story of success__
+- Tags:: #[[stories]]
+__This is the essence of intuitive heuristics: when faced with a difficult question, we often answer an easier one instead, usually without noticing the substitution__

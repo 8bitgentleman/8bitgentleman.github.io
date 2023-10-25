@@ -37,24 +37,24 @@ const config: QuartzConfig = {
         //   highlight: "rgba(143, 159, 169, 0.15)", //#tag & [[page]] bg
         // },
         lightMode: {
-          light: "#ffffff",//background
-          lightgray: "#e5e5e5",
-          gray: "#757575", //accents metadata & DONE text
-          darkgray: "#4e4e4e",//text and icons
-          dark: "#2b2b2b", //page title and heading
-          secondary: "#5f9b65",//#tag & [[page]] hover text
-          tertiary: "#5f9b6550",//#tag & [[page]] hover text
-          highlight: "rgba(143, 159, 169, 0.15)", //#tag & [[page]] bg
+          light: "rgb(255, 252, 240)",//background
+          lightgray: "rgb(230, 228, 217)", //borders
+          gray: "rgb(183, 181, 172)", // graph links, heavier borders, accents metadata & DONE text
+          darkgray: "#4e4e4e",//body text and icons
+          dark: "#2b2b2b", //page title, header text and icons
+          secondary: "rgb(209, 77, 65)",//link colour, current [[graph view|graph]] node
+          tertiary: "rgb(67, 133, 190)",//hover states and visited [[graph view|graph]] nodes
+          highlight: "rgb(230, 228, 217, .5)", //internal link background, highlighted text, [[syntax highlighting|highlighted lines of code]]
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "rgb(16, 15, 15)",
+          lightgray: "rgb(40, 39, 38)",
+          gray: "rgb(64, 62, 60)",
+          darkgray: "rgb(206, 205, 195)",
+          dark: "rgb(206, 205, 195)",
+          secondary: "rgb(209, 77, 65)",
+          tertiary: "rgb(67, 133, 190)",
+          highlight: "rgb(64, 62, 60, .15)",
         },
       },
     },

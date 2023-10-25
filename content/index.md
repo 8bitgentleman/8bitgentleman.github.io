@@ -1,9 +1,9 @@
 ---
-title: " 🌱 About These Notes‎"
+title: "About These Notes"
 enableToc: false
+status: budding
 tags:
   - writing
-  - budding
 ---
 These notes are a second attempt at a [[Digital Garden]] and as such are a little wild and untamed. There's no central index or table of contents; you explore by going deeper and deeper down the rabbit hole.
 > [!note] Disclaimer
@@ -12,7 +12,7 @@ These notes are a second attempt at a [[Digital Garden]] and as such are a littl
 
 Things I will do here include:
 - Not use correct sentence structure
-- use ﬆrange ligatures like æ instead of `ae` for no reason other than liking how it looks
+- use ﬆrange ligatures like æ instead of *ae* for no reason other than liking how it looks
 
 ### That being said, here are some good pages to start at:
 All the bits of my #writing on their way to becoming [[Evergreen Notes]]

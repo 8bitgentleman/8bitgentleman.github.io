@@ -15,14 +15,14 @@ $primary-green: #5f9b65;
     font-size: 33px;
     font-weight: 400;
     color:rgba(0, 0, 0, 0.87);
-    font-family: 'Warnock Pro', serif !important;
+    // font-family: 'Warnock Pro', serif !important;
   }
   html[saved-theme="dark"] .article-title{
     color:var(--darkgray) !important; 
   }
   p, span{
     font-size:18px;
-    font-family: 'Warnock Pro', serif !important;
+    // font-family: 'Warnock Pro', serif !important;
   }
   .content-meta{
     color: #757575;
@@ -31,12 +31,12 @@ $primary-green: #5f9b65;
   }
   
   .tags a.tag-link{
-    color: #757575;
+    color: var(--lightgray);
     border: 1px solid rgba(0,0,0,.15);
     background-color: transparent;
     cursor: pointer;
     font-size:13px;
-    font-family: 'Cabin', sans-serif;
+    // font-family: 'Cabin', sans-serif;
     font-weight: 400;
     margin-right: 3px;
     padding: 5px 6px;
@@ -47,14 +47,14 @@ $primary-green: #5f9b65;
     border: 1px solid #75757575;
   }
   h1,h2,h3{
-    color: #424242 !important;
+    // color: #424242 !important;
     font-weight: 400 !important;
-    font-family: 'Warnock Pro', serif !important;
+    // font-family: 'Warnock Pro', serif !important;
   }
   
   html[saved-theme="dark"] {
-    h1,h2,h3{
-      color:#e8e8e8 !important;
+    h1:not(.article-title):not(.page-title),h2{
+      border-bottom:1px solid var(--darkgray);
     }
   }
   h2 {
@@ -68,12 +68,38 @@ $primary-green: #5f9b65;
   }
 
 //  regular blockquotes
-  blockquote{
-    border-left: 3px solid #505050 !important;
+  blockquote:not(.callout) {
+    position: relative;
+    font-style: italic;
+    // width: max-content;
+    padding: 20px;
+    margin: 20px 0;
   }
+  
+  blockquote:not(.callout)::before,
+  blockquote:not(.callout)::after {
+    content: '';
+    position: absolute;
+    font-size: 3em;
+    // color: #333; /* Adjust the color as needed */
+  }
+  
+  blockquote:not(.callout)::before {
+    content: '\201C'; /* Left double quotation mark */
+    top: 0;
+    left: 10px;
+  }
+  
+  blockquote:not(.callout)::after {
+    content: '\201D'; /* Right double quotation mark */
+    bottom: 0;
+    right: 10px;
+  }
+  
+  
   .callout[data-callout=info], .callout[data-callout=todo]{
-    --color:#5f9b65 !important;
-    --color:#5f9b65 !important;
+    // --color:#5f9b65 !important;
+    // --color:#5f9b65 !important;
   }
   blockquote[data-callout="quote"]{
     .callout-title-inner{
@@ -91,24 +117,22 @@ $primary-green: #5f9b65;
   }
   html[saved-theme="dark"] {
     .callout-icon{
-      color:$primary-green;
+      // color:$primary-green;
     }
   }
   html[saved-theme="dark"] {
     input[type=checkbox]:checked{
-      background-color:$primary-green ;
-      color:$primary-green ;
-      border-color: $primary-green;
+      // background-color:$primary-green ;
+      // color:$primary-green ;
+      // border-color: $primary-green;
     }
   }
   a.internal{
-    color:$primary-green;
+    // color:$primary-green;
     background-color: transparent !important;
     font-weight: 400 !important;
   }
-  a:hover {
-    color: var(--tertiary)!important;
-  }
+
   a:hover .popover, .popover:hover{
     // animation: none !important;
     animation: 0s 0s forwards dropin !important;
@@ -131,15 +155,13 @@ $primary-green: #5f9b65;
     font-size: 14.7px;
   }
     // page title
-  .page-title {
-    border-left: 4px double $primary-green;
-  }
+  
   html[saved-theme="dark"] .page-title {
-    border-left: 4px double var(--darkgray);
-    border-bottom:4px solid $primary-green;
+    // border-left: 4px double var(--darkgray);
+    // border-bottom:4px solid $primary-green;
     
     > a{
-      color: $primary-green;
+      color: var(--secondary);
     }
   }
   // page popovers //

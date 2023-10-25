@@ -4,7 +4,8 @@ tags:
     - writing
 ---
 
-When you live your life [[on doing hard things|doing hard things because they are hard]] you become well acquainted with failure. People think the failure as an ending but it's not. Failure is [scaffolding](((53FynjYad)) for rockets yet to be launched.
+When you live your life [[on doing hard things|doing hard things because they are hard]] you become well acquainted with failure. People think the failure as an ending but it's not. Failure is *scaffolding* for rockets yet to be launched.
+
 Saying that and doing that are two vastly different things. Becoming comfortable with failure is a muscle like any other.
 
 That doesn't mean failure doesn't affect you in some [[stoicism|stoic]] way but by practicing failure you learn how to bounce back a little faster and generally treat life as more of an #experiment

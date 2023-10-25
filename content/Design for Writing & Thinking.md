@@ -39,7 +39,7 @@ Aliases
 ### Explorative Navigation
 
 
-    - Navigating through a typical website is an endless amount of clicking and new tab opening with everything seen before gone or no longer visible.
+- Navigating through a typical website is an endless amount of clicking and new tab opening with everything seen before gone or no longer visible.
 
 
 

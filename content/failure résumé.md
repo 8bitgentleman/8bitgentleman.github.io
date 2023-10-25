@@ -8,7 +8,7 @@ status: budding
 
  Failures big and small. Professional and personal :)
 
- > the first step to surviving [[failure]] is to stop seeing it as a dead end and start seeing it as scaffolding
+ > the first step to surviving failure is to stop seeing it as a dead-end and start seeing it as scaffolding
 
  > *If you want to do something do it wrong first* 
 

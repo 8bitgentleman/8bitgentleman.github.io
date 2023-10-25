@@ -21,14 +21,13 @@ The **NOW** page is an interesting addition to a #[[Digital Garden]] which diffe
 
 ### What are some good examples of a **NOW** page?
 
+- [Andy Henson](https://elaptics.co.uk/now/)
 
-    - [Andy Henson](https://elaptics.co.uk/now/)
+- [Derek Sivers](https://sive.rs/now)
 
-    - [Derek Sivers](https://sive.rs/now)
+- [nownownow](https://nownownow.com/about)
 
-    - [nownownow](https://nownownow.com/about)
-
-    - [julian.digital](https://julian.digital/)
+- [julian.digital](https://julian.digital/)
 
  For a more polished intro check out [[About these notes]]
 
@@ -55,7 +54,7 @@ The **NOW** page is an interesting addition to a #[[Digital Garden]] which diffe
 ### Sprint 2023
 
 
-- Fucked off to [[New Zealand Trip|New Zealand]] for ~2 months work & travel. I didn't realize it at the time but it was very much a reaction to the terrible work project™ of 2022
+- Fucked off to [[New Zealand Trip|New Zealand]] for ~2 months work & travel. I didn't realize it at the time but it was very much a reaction to the terrible-work-project™ of 2022
 
 
 

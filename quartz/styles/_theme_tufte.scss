@@ -27,8 +27,25 @@ body {
       left: 0.1rem;
       position: relative;
       vertical-align: baseline;
-      color:#5f9b65;
+      color:var(--tertiary);//#5f9b65;
   }
+  .sidenote-number {
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--tertiary);
+    color: var(--darkgray);
+    font-size: .8rem;
+    line-height: .8rem;
+  }
+  
+  // .sidenote-number>sup{
+  //   border-radius: 50%;
+  //     border:1px solid white;
+  //     height:10px;
+  // }
   
   .sidenote-number:after,
   .sidenote-number:before,
@@ -36,16 +53,16 @@ body {
       font-family: et-book-roman-old-style;
       position: relative;
       vertical-align: baseline;
-      color:#5f9b65;
+      color:var(--tertiary);//#5f9b65;
   }
   .sidenote-number:before {
-    content: "[";
+    // content: "[";
     font-size: 1rem;
     top: -0.3rem !important;
     right: 0.01rem;
   }
   .sidenote-number:after {
-      content: "]";
+      // content: "]";
       font-size: 1rem;
       top: -0.3rem;
       left: 0.01rem;
