@@ -22,8 +22,9 @@ All the bits of my #writing on their way to becoming [[Evergreen Notes]]
 
 ### __What am I working on right__ [[NOW]]?
 - Following [[curiosity trails]] wherever they lead
-- [experimenting]([[experiment]]) with creating new [[Roam Research]] components
-- Writing [[How to communicate with empathy and collaboration]]
+- Creating new [[Roam Research]] components
+- Getting more into writing
+
 You can peruse some of my #favorite stuff here
   - [[How to Be the Greatest Improviser on Earth#^971708|know, care, say]]
 

@@ -24,3 +24,4 @@ And then on top of it looking around and seeing people start relationships and g
 Cut to 2020 covid hits and I'm immediately let go and there's sort of an understanding that no architecture firms are hiring they're not going to be hiring for a long time and for the first time in ever I had no way to move forward. Nothing I could do would improve my chances of moving forward I just had to sit and evaluate and obsess and find something else to value beyond professional prowess
 
 I think when time didn't mean anything that's when it really hit me in the face that it *did* mean something not that I was wasting mine but not using it in a way that contributed to my own happiness and that the things I always thought there would be time for I wasn't making time for. I have to __actively__ make time for them
+- Tags:: #favorite
