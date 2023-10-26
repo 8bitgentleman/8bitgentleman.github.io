@@ -1,7 +1,7 @@
 ---
 title: test
 description: A description here instead of the regular page?
-Status: evergreen
+status: evergreen
 ---
 test text ^DYQ86Vzzz
 

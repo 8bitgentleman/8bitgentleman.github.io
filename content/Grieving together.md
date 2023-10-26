@@ -6,10 +6,11 @@ tags:
   - writing
   - grief
   - COVID19
+  - Person/DelDel
 ---
 
 
- One of the most challenging parts of grief is the [[loneliness]]. Grieving takes a *long* time. There's no way to know what that will look like for you until you find out.
+ One of the most challenging parts of grief is the #loneliness. Grieving takes a *long* time. There's no way to know what that will look like for you until you find out.
 
  I lost my grandmother in the before times of 2020; before the world stopped. In many ways 2020 being like it was made dealing with my grief a little easier. 
 

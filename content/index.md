@@ -16,11 +16,10 @@ Things I will do here include:
 
 ### That being said, here are some good pages to start at:
 All the bits of my #writing on their way to becoming [[Evergreen Notes]]
--  [[for grandma]]
-- [[What am I Curious About]]
+- [[for grandma]] - *Written for and read at my grandmother's funeral. The first time I shared my writing publicly and probably my favorite thing I've written*
 - [[Grieving together]]
+- My [[failure résumé]]
 
-My [[failure résumé]]
 ### __What am I working on right__ [[NOW]]?
 - Following [[curiosity trails]] wherever they lead
 - [experimenting]([[experiment]]) with creating new [[Roam Research]] components

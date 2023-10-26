@@ -1,6 +1,6 @@
 ---
 title: on dating outside architecture
-Status: budding
+status: budding
 date: 2021-12-02
 tags:
   - writing

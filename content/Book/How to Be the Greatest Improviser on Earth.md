@@ -1,5 +1,5 @@
 ---
-Reading Status: read
+status: read
 Full Title: How to Be the Greatest Improviser on Earth
 Cover: https://images-na.ssl-images-amazon.com/images/I/71HjkKEcktL.jpg
 Rating: 7

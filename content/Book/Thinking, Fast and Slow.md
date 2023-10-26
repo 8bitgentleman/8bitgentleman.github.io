@@ -1,5 +1,5 @@
 ---
-Reading Status: abandoned
+status: abandoned
 Full Title: Rationality- From AI to Zombies
 Cover: https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMattVogel%2FbDT6S6nvM2.png?alt=media&token=274bb41f-6a8f-468a-bbdf-54d121e68613
 Rating: 5

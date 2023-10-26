@@ -5,9 +5,7 @@ Success Criteria:
   - Stage 2 Success Clarified draft for [[Person/Helena Ng]]
   - Stage 3 Success A published draft as part of a
 tags:
-  - Projects
-  - Digital
-  - Garden
+  - writing
 Priority Level: 5
 enableToc: true
 date: 2020-08-05

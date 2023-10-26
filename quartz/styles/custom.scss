@@ -9,7 +9,7 @@
 //OVERALL CSS//
 ///////////////
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Cinzel&family=Italiana&family=Lora:ital@0;1&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Delicious+Handrawn&family=Cinzel&family=Italiana&family=Fasthand&family=Lora:ital@0;1&family=Poiret+One&display=swap');
 
 body{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4' height='4' viewBox='0 0 4 4' style='enable-background:new 0 0 4 4;'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:%23DAD8CE;fill-opacity:0.4;%7D%3C/style%3E%3Cpath class='st0' d='M1,3h1v1H1V3z M3,1h1v1H3V1z'/%3E%3C/svg%3E") ;
@@ -166,7 +166,17 @@ ul.tags{
 body[data-slug="Theme-Tester"] .article-title{
   font-family: Italiana;
 }
+body[data-slug="for-grandma"]{
+  font-family:Fasthand;//Delicious Handrawn;
+  p,div{
+    font-size: 1.3rem;}
+}
 
+body[data-slug="for-grandma"] {
+  .article-title, .graph>h3, .backlinks>h3, .page-title{
+    font-family:Delicious Handrawn;
+  }
+}
 // only center headings on mobile
 @media all and (max-width: $fullPageWidth) {
   article h1,
