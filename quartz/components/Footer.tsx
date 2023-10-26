@@ -14,15 +14,20 @@ export default ((opts?: Options) => {
       <footer>
         <hr />
         <p>
-          Created with <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>, © {year}
+          Created with <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>, © {year} -{' '}  
+          <span>
+          {Object.entries(links).map(([text, link]) => (
+              <a target="_blank" href={link}>{text}</a>
+          ))}
+          </span>
         </p>
-        <ul>
+        {/* <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
               <a target="_blank" href={link}>{text}</a>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </footer>
     )
   }
