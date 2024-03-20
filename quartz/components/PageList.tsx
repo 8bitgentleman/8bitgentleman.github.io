@@ -40,9 +40,10 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit }: Pr
       {list.map((page) => {
         const title = page.frontmatter?.title
         const tags = page.frontmatter?.tags ?? []
+        const status = page.frontmatter?.status ?? ""
 
         return (
-          <li class="section-li">
+          <li class="section-li" data-status={status}>
             <div class="section">
               {page.dates && (
                 <p class="meta">
@@ -60,6 +61,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit }: Pr
                 {tags.map((tag) => (
                   <li>
                     <a
+                      data-tag={tag}
                       class="internal tag-link"
                       href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
                     >

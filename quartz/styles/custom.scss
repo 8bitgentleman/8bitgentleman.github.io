@@ -1,3 +1,482 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+//LESSWRONG THEME//
+@use "./variables.scss" as *;
+@use "./_theme_lessWrong.scss";
+@use "./_theme_tufte.scss";
+@use "./component_carousel.scss";
+@use "./_component_toggleDiv.scss";
+@use "./component_doubleImage";
+///////////////
+//OVERALL CSS//
+///////////////
+
+
+body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4' height='4' viewBox='0 0 4 4' style='enable-background:new 0 0 4 4;'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:%23DAD8CE;fill-opacity:0.4;%7D%3C/style%3E%3Cpath class='st0' d='M1,3h1v1H1V3z M3,1h1v1H3V1z'/%3E%3C/svg%3E") ;
+}
+html[saved-theme="dark"] body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4' height='4' viewBox='0 0 4 4' style='enable-background:new 0 0 4 4;'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:%23403e3c;fill-opacity:0.4;%7D%3C/style%3E%3Cpath class='st0' d='M1,3h1v1H1V3z M3,1h1v1H3V1z'/%3E%3C/svg%3E") !important;
+
+}
+
+.callout[data-callout=note] {
+  --color: rgb(67, 133, 190) !important;
+  --border: rgb(32, 94, 166) !important;
+  --bg: rgb(67, 133, 190, .1);
+}
+.content-meta>span{
+  margin-right: 10px;
+}
+
+body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4' height='4' viewBox='0 0 4 4' style='enable-background:new 0 0 4 4;'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:%23DAD8CE;fill-opacity:0.4;%7D%3C/style%3E%3Cpath class='st0' d='M1,3h1v1H1V3z M3,1h1v1H3V1z'/%3E%3C/svg%3E") ;
+}
+html[saved-theme="dark"] body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4' height='4' viewBox='0 0 4 4' style='enable-background:new 0 0 4 4;'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:%23403e3c;fill-opacity:0.4;%7D%3C/style%3E%3Cpath class='st0' d='M1,3h1v1H1V3z M3,1h1v1H3V1z'/%3E%3C/svg%3E") !important;
+
+}
+
+.callout[data-callout=note] {
+  --color: rgb(67, 133, 190) !important;
+  --border: rgb(32, 94, 166);
+  --bg: rgb(67, 133, 190, .1);
+}
+.content-meta>span{
+  margin-right: 10px;
+}
+
+
+// specific tag stying
+a[data-tag="acorn"]:not(.essay-status){
+  color: rgb(218, 112, 44) !important;
+  background-color: transparent !important;
+  padding: 3px 3px;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+// tag page styling
+body[data-slug^=tags\/] li[data-status=acorn]{
+  
+}
+body[data-slug^=tags\/] li[data-status=acorn]>div:before {
+  opacity:.3;
+  content: url('data:image/svg+xml,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" x="0px" y="0px" viewBox="0 0 14 14" xml:space="preserve"><path class="st0" d="M2.9,8.2c0-0.2,0-0.3,0-0.5V7.7c0.3-0.1,0.6-0.2,0.9-0.4c0.2,0,0.4-0.1,0.6-0.2C4.5,7,4.7,7,4.9,6.9 c0.2-0.1,0.5-0.1,0.7-0.1s0.4,0,0.5-0.1c0.2,0,0.4,0,0.7,0c0.3,0,0.6,0,0.9,0c0.3,0,0.5,0.1,0.8,0.1C8.6,6.9,8.9,6.9,9.2,7 c0.2,0.1,0.4,0.1,0.6,0.2c0.4,0.1,0.8,0.3,1,0.5c0,0,0.1,0,0.1,0.1c0,0.4,0,0.7,0,1c0,0.3-0.1,0.5-0.1,0.8c0,0.2-0.1,0.4-0.1,0.6 c-0.1,0.2-0.1,0.4-0.2,0.6c-0.1,0.4-0.3,0.7-0.5,0.9c-0.3,0.4-0.5,0.7-0.9,0.9c-0.2,0.2-0.5,0.3-0.7,0.4C8.2,13,8,13.1,7.8,13.2 c-0.3,0.2-0.6,0.4-0.8,0.8c0,0.1,0,0.1-0.1,0c-0.1-0.1-0.2-0.3-0.3-0.4c-0.3-0.3-0.6-0.5-0.9-0.6c-0.3-0.1-0.6-0.2-0.8-0.4 c-0.4-0.1-0.6-0.3-0.9-0.5c-0.3-0.3-0.6-0.7-0.7-1c-0.1-0.2-0.2-0.4-0.3-0.7c0-0.3-0.1-0.5-0.1-0.7S3,9.4,3,9.2 C2.9,8.9,2.9,8.5,2.9,8.2z" style="fill:rgb(78, 78, 78);"/><path class="st0" d="M7.3,1.5c0,0.1,0,0.2,0,0.3c0,0,0,0.1,0.1,0.1c0.4,0,0.7,0,1,0.1C8.6,2,8.8,2.1,9,2.1c0.3,0.1,0.7,0.2,0.9,0.3 c0.4,0.2,0.8,0.5,1,0.8c0.2,0.2,0.4,0.5,0.6,0.8c0,0.4,0.1,0.7,0.2,0.9c0.1,0.3,0.1,0.7,0.1,0.9c0,0.3-0.1,0.5-0.2,0.8 c-0.1,0.1-0.2,0.2-0.2,0.4c0,0,0,0-0.1,0c-0.3-0.2-0.6-0.3-0.9-0.4C10.3,6.3,10,6.2,9.8,6.2c-0.2,0-0.4-0.1-0.6-0.1S9,6,8.8,6 C8.6,6,8.4,5.9,8.2,5.9C8,5.9,7.9,5.8,7.7,5.8c-0.3,0-0.5,0-0.8,0c-0.3,0-0.5,0-0.8,0.1C6,5.9,5.8,5.9,5.6,6C5.4,5.9,5.1,6,4.9,6 S4.6,6.1,4.4,6.1C4.2,6.2,4,6.2,3.8,6.3C3.6,6.4,3.4,6.4,3.2,6.5C3,6.6,2.9,6.7,2.7,6.8H2.6C2.6,6.6,2.5,6.4,2.4,6.3 C2.3,6.1,2.3,5.8,2.3,5.6c0-0.2,0-0.5,0-0.7c0-0.2,0.1-0.5,0.2-0.7C2.6,4,2.7,3.7,2.9,3.4c0.2-0.3,0.5-0.6,0.8-0.8 C4,2.5,4.2,2.4,4.4,2.3c0.3-0.1,0.5-0.2,0.8-0.2C5.4,2.1,5.6,2,5.8,2c0.3,0,0.6-0.1,0.9-0.1c0,0,0,0,0-0.1c0-0.3,0-0.5-0.1-0.8 c0-0.2-0.1-0.5-0.2-0.7V0.3C6.6,0.3,6.8,0.2,7,0c0,0,0,0,0.1,0c0.1,0.1,0.1,0.2,0.1,0.4c0.1,0.3,0.1,0.6,0.1,0.9 C7.3,1.3,7.3,1.4,7.3,1.5L7.3,1.5z" style="fill:rgb(78, 78, 78);" /></svg>');
+  // color: rgb(183, 181, 172) ;
+  // text-shadow: 0 0 0 rgb(188, 82, 21);
+  display: inline; /* Add this line to make it inline */
+  padding-right: 10px;
+}
+body[data-slug^=tags\/] li[data-status=acorn] a.internal{
+  color:rgba(209, 77, 65, 0.2) ; 
+}
+body[data-slug^=tags\/] li[data-status=acorn] .meta{
+  opacity:.3;
+}
+
+
+a[data-tag="seedlings"]:not(.essay-status){
+  color: rgb(135, 154, 57) !important;
+  background-color: transparent !important;
+  padding: 3px 3px;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+a[data-tag="seedlings"]:not(.essay-status):before {
+  content: '🌱 ';
+  color: transparent ;
+  text-shadow: 0 0 0 rgb(135, 154, 57);
+}
+
+// tag page styling
+body[data-slug^="tags/"] li[data-status="seedlings"] a.internal{
+  color:rgba(209, 77, 65, 0.5) ; 
+}
+body[data-slug^="tags/"] li[data-status="seedlings"] .meta{
+  opacity:.5 ; 
+}
+body[data-slug^=tags\/] li[data-status=seedlings]>div:before {
+  content: "🌱 ";
+  color: transparent ;
+  text-shadow: 0 0 0 rgb(135, 154, 57);
+  display: inline; /* Add this line to make it inline */
+  padding-right: 10px;
+  opacity:.5;
+}
+
+a[data-tag="budding"]:not(.essay-status) {
+  color: rgb(102, 128, 11) !important;
+  background-color: transparent !important;
+  padding: 3px 3px;
+  font-weight: 600;
+  line-height: 1.4em;
+  
+}
+.essay-status{
+  color:var(--gray);
+}
+a[data-tag="budding"]:not(.essay-status):before {
+  content: '🌿 ';
+  color: transparent;
+  text-shadow: 0 0 0 rgb(102, 128, 11);
+  
+}
+// tag page styling
+body[data-slug^="tags/"] li[data-status="budding"] a.internal{
+  color:rgba(209, 77, 65, 0.75) ;
+}
+body[data-slug^="tags/"] li[data-status="budding"] .meta{
+  opacity: .75;
+}
+body[data-slug^=tags\/] li[data-status=budding]>div:before {
+  content: "🌿 ";
+  color: transparent;
+  text-shadow: 0 0 0 rgb(102, 128, 11);
+  padding-right: 10px;
+  opacity: .75;
+}
+
+body[data-slug="index"] .page-header .article-title:before{
+  content: '🌱 ';
+  color: transparent ;
+  text-shadow: 0 0 0 rgb(102, 128, 11);
+}
+
+a[data-tag="evergreen"]:not(.essay-status){
+  background-color: transparent !important;
+}
+// a[data-tag="evergreen"]{
+//   background: #0DC670 !important;
+//   color: #fff !important;
+//   padding: 3px 8px;
+//   line-height: 2em;
+//   font-weight: 500;
+// }
+// a[data-tag="evergreen"]:before {
+//   content: '🌲 ';
+//   text-shadow: 0 0 3px white;
+//   position: relative;
+// }
+// a[data-tag="evergreen"]:hover{
+//   color:#02120a !important;
+// }
+// tag page styling
+body[data-slug^=tags\/] li[data-status=evergreen]>div:before {
+  content: "🌲 ";
+  color: transparent;
+  text-shadow: 0 0 0 rgb(102, 128, 11);
+  padding-right: 10px;
+}
+
+//tag page book style
+body[data-slug^=tags\/] li:has(a[href*='/Book/'])>div:before {
+  content: "📖 ";
+  padding-right: 10px;
+}
+a[href*='/Book/']:not(.alias):before {
+  content: "Book/";
+}
+
+// roam OR select component
+select.roam-or-component{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: 1px solid var(--shiki-token-comment);
+    cursor: pointer;
+    color: var(--shiki-color-text);
+    border-radius: 5px;
+    padding: 0 .5em;
+  }
+
+  
+  
+article {
+  a{
+    color:inherit; 
+  }
+  
+  a.internal {
+    // font-family: 'Burrow Serif', serif;
+    font-variation-settings: 'wght' 100;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    &:not(.tag-link):not([aria-hidden="true"]):not(.essay-status a):after {
+      content: "\B0";
+      font-size:20px;
+      color:var(--secondary);
+    }
+    .hash:not(.essay-status .hash){
+      color:var(--secondary);
+    }
+      
+    
+  }
+  // external links
+  a.external {
+    padding-right: 10px;
+  
+    &:after {
+      content: "↗";
+      font-size: 10px;
+      color: transparent;
+      text-shadow: 0 0 0 var(--secondary);
+      position: absolute;
+      margin-left: 2px; // Use margin instead of padding-left
+    }
+    &:hover {
+      text-decoration: none;
+      font-variation-settings: 'wght' 700;
+    }
+  }
+}
+img.cover-image {
+  height: 100px !important;
+  float: left !important;
+  margin: 0 1rem 1rem 0; /* Top, Right, Bottom, Left */
+}
+
+// page title
+.page-title {
+  border-bottom:4px solid var(--secondary);
+  border-left: 4px double var(--secondary);
+  padding-left: 4px;
+  font-size: 1rem;
+}
+
+body[data-slug^=tags\/] ul.tags,
+body[data-slug^=Book\/] ul.tags{
+  display:none;
+}
+.text-highlight {
+  background-color: #d0a21588 !important;
+}
+body[data-slug="Theme-Tester"] .article-title{
+  font-family: var(--test);
+}
+// body[data-slug="for-grandma"]{
+//   // font-family: var(--cursive2), cursive;//Delicious Handrawn;
+//   p,div,span{
+//     font-size: 1.3rem;}
+// }
+
+body[data-slug="for-grandma"] {
+  .article-title, .graph>h3, .backlinks>h3, .page-title{
+    font-family:var(--cursive1);
+  }
+}
+// only center headings on mobile
+@media all and (max-width: $fullPageWidth) {
+  article h1:not(.popover h1),
+  article h2:not(.popover h1),
+  article h3:not(.popover h1){
+    text-align:center;
+  }
+}
+
+// graph
+circle[id^="tags/"]{
+  fill:var(--darkgray);
+}
+
+.box{
+	background-color: rgb(255, 252, 240);
+}
+.recipe {
+  border: 1px solid #eee;
+  padding: 0;
+}
+.recipe header {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 1rem 2rem 1rem;
+}
+.recipe__img {
+  overflow: hidden;
+  height: 250px;
+}
+.recipe__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.recipe__share {
+  position: absolute;
+  top: -3rem;
+  right: 1rem;
+}
+.recipe .recipe__content {
+  padding: 1rem;
+	padding-top:0;
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  grid-gap: 0 2ch;
+}
+
+@media only screen and (max-width: 780px) {
+  .recipe .recipe__content {
+	  display: inherit;
+	}
+	.recipe__ingredients{
+		margin-bottom: 1rem;
+	}
+	.level-right>.level-item>div{
+		display: flex; 
+		flex-direction: row;
+		
+	}
+	.level-right>.level-item .heading{
+		margin-left:1rem;
+	}
+	header.level{
+		padding-bottom:1rem;
+	}
+}
+.recipe__servings {
+  width: 3rem;
+}
+.recipe__ingredients {
+  padding-left: 1rem;
+}
+.recipe__ingredients::before {
+  content: "Ingredients";
+  padding-left: 0.5ch;
+  display: block;
+  font-weight: 100;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 1.2599rem;
+  line-height: 1;
+  margin-bottom: 0.8090169944rem;
+  padding-bottom: 0.8090169944rem;
+  border-bottom: 1px dashed currentColor;
+}
+.recipe__ingredients li {
+  list-style-type: none;
+}
+.recipe__ingredients label {
+  cursor: pointer;
+}
+.recipe__ingredients label:hover {
+  color: #3298dc;
+}
+.recipe__ingredients input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+.recipe__ingredients input::before {
+  color: #666;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  margin-right: 0.25rem;
+}
+.recipe__ingredients input:checked ~ span {
+  color: #666;
+  text-decoration: line-through;
+}
+.recipe__ingredients input:checked::before {
+  content: "";
+}
+.recipe .content::before {
+  content: "Directions";
+  padding-left: 0.5ch;
+  display: block;
+  font-weight: 100;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 1.2599rem;
+  line-height: 1;
+  margin-bottom: 0.8090169944rem;
+  padding-bottom: 0.8090169944rem;
+  border-bottom: 1px dashed currentColor;
+}
+.level-left>.level-item>img{
+	height:100px;
+	margin-right:16px;
+}
+
+.paprika a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paprika img{
+	width:30px;
+}
+.paprika span{
+	margin-left:10px;
+}
+.rating .fa-star:not(.checked){
+	color:rgb(230, 228, 217);
+}
+.rating .checked {
+  color: rgb(208, 162, 21);
+}
+.recipe__ingredients li:nth-child(odd) {
+    background-color:rgb(242, 240, 229);
+}
+.content ol {
+      list-style-type: none; /* Remove the default list style */
+      counter-reset: my-counter; /* Reset the counter for custom numbering */
+    }
+
+    .content li::marker {
+      font-family: 'Playfair Display SC', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 10, 0.90);
+    text-transform: uppercase;
+    }
+.tag:not(body) {
+	 border:1px solid rgb(230, 228, 217);
+    align-items: center;
+    background-color: transparent;
+    border-radius: 4px;
+    color: rgb(16, 15, 15);
+    display: inline-flex;
+    font-size: .75rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    white-space: nowrap;
+}
+.notification {
+	background-color: rgb(242, 240, 229);
+}
+
+// stick headers that doesn't work
+// h1,h2,h3{
+// 	position:sticky;
+// 	top:0;
+// 	background-color: var(--light);
+//   z-index: 999;
+// }
+
+// recent notes tags
+.recent-li ul.tags
+//  ,.recent-li .meta:not(:first-child)
+ {
+  display: none;
+}
+.recent-li  h4{
+  margin-bottom: 0;
+}
+
+// make sidebar vertical on small screens
+@media only screen and (max-width: 780px) {
+  .page>#quartz-body .sidebar {
+
+    flex-direction: column;
+
+  }
+}
+
+// tag page
+li.section-li>.section {
+  grid-template-columns: 6em 1fr 3fr;
+}

@@ -40,16 +40,17 @@ export default ((userOpts?: Partial<Options>) => {
           {pages.slice(0, opts.limit).map((page) => {
             const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
             const tags = page.frontmatter?.tags ?? []
+            const status = page.frontmatter?.status ?? ""
 
             return (
               <li class="recent-li">
                 <div class="section">
                   <div class="desc">
-                    <h3>
+                  <h4 data-status={status}>
                       <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
                         {title}
                       </a>
-                    </h3>
+                    </h4>
                   </div>
                   {page.dates && (
                     <p class="meta">
@@ -60,6 +61,7 @@ export default ((userOpts?: Partial<Options>) => {
                     {tags.map((tag) => (
                       <li>
                         <a
+                          data-tag={tag}
                           class="internal tag-link"
                           href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
                         >

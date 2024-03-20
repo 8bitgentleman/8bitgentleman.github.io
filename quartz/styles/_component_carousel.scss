@@ -1,0 +1,43 @@
+.carousel {
+    position: relative;
+    display: inline-block;
+}
+
+.carousel-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+	background:var(--lightgray);
+	opacity: 1;
+    padding:0 10px;
+}
+:root[saved-theme=dark] .carousel-item.active {
+    background:var(--lightgray) !important;
+}
+.carousel-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: opacity 0.3s;
+    opacity: 0;
+    background-color: var(--secondary);
+    border: none;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+.carousel-button.prev:hover{
+	opacity: .5;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+.carousel-button.next:hover{
+	opacity: .5;
+}
