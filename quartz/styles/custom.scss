@@ -211,9 +211,11 @@ article {
     .hash:not(.essay-status .hash){
       color:var(--secondary);
     }
-      
-    
   }
+  a.internal::before{
+    color:var(--secondary);
+  }
+  
   // external links
   a.external {
     padding-right: 10px;

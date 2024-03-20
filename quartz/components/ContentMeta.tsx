@@ -25,7 +25,8 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
     const text = fileData.text
-
+    const status = fileData.frontmatter?.status
+    
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
@@ -41,7 +42,18 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         })
         segments.push(displayedTime)
       }
-
+      if (status) {
+        const linkDest = `../tags/${status}`;
+        const statusElement = (
+          <span className="essay-status">
+            <strong key="statusLabel">Status:</strong>
+            <a key="statusLink" href={linkDest} className="internal essay-status" data-tag={status}>
+              <span className="hash">#</span>{status}
+            </a>
+          </span>
+        );
+        segments.push(statusElement);
+      }
       const segmentsElements = segments.map((segment) => <span>{segment}</span>)
 
       return (

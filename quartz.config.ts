@@ -25,9 +25,9 @@ const config: QuartzConfig = {
         header: "Poppins",
         body: "Crimson Pro",
         code: "IBM Plex Mono",
-        test: "Italiana",
-        cursive1: "Delicious Handrawn",
-        cursive2: "Patrick Hand SC",
+        // test: "Italiana",
+        // cursive1: "Delicious Handrawn",
+        // cursive2: "Patrick Hand SC",
       },
       colors: {
         lightMode: {
