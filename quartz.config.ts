@@ -8,44 +8,47 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "The Rooftop Garden",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    // baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Poppins",
+        body: "Crimson Pro",
         code: "IBM Plex Mono",
+        test: "Italiana",
+        cursive1: "Delicious Handrawn",
+        cursive2: "Patrick Hand SC",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#FFFCF0",//background
+          lightgray: "#E6E4D9", //borders
+          gray: "#B7B5AC", // graph links, heavier borders, accents metadata & DONE text
+          darkgray: "#4e4e4e",//body text and icons
+          dark: "#2b2b2b", //page title, header text and icons
+          secondary: "#D14D41",//link colour, current [[graph view|graph]] node
+          tertiary: "#4385BE",//hover states and visited [[graph view|graph]] nodes
+          highlight: "#E6E4D950" //internal link background, highlighted text, [[syntax highlighting|highlighted lines of code]]
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#100F0F",
+          lightgray: "#282726",
+          gray: "#403E3C",
+          darkgray: "#CECDC3",
+          dark: "#CECDC3",
+          secondary: "#D14D41",
+          tertiary: "#4385BE",
+          highlight: "#403E3C15"
         },
       },
     },
@@ -53,8 +56,9 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
+      Plugin.TableOfContents(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
+        priority: ["git","frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({
@@ -64,9 +68,12 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
+      // Plugin.RoamTables(),
+      // Plugin.togglableTables(),
+      // Plugin.RoamFlavoredMarkdown(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
-      Plugin.TableOfContents(),
+      // Plugin.TufteComponents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
     ],
