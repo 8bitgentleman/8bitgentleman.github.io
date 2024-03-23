@@ -32,9 +32,26 @@ document.addEventListener("nav", () => {
   if (currentTheme === "dark") {
     toggleSwitch.checked = true
   }
+  // TODO why does this only work after 2 tries?
+  async function shortcutHandler(e: HTMLElementEventMap["keydown"]) {
+    if (e.key === "e" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
+      const darkModeToggle = document.querySelector("#darkmode-toggle") as HTMLInputElement
+      const newTheme = (darkModeToggle as HTMLInputElement)?.checked ? "dark" : "light"
+      // Check if the checkbox is checked
+      document.documentElement.setAttribute("saved-theme", newTheme)
+      localStorage.setItem("theme", newTheme)
+      // check the checkbox
+      darkModeToggle.checked = !darkModeToggle.checked
+      emitThemeChangeEvent(newTheme)
+      return
+    }
+  }
 
   // Listen for changes in prefers-color-scheme
   const colorSchemeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
   colorSchemeMediaQuery.addEventListener("change", themeChange)
   window.addCleanup(() => colorSchemeMediaQuery.removeEventListener("change", themeChange))
+  // listen for shortcut
+  document.addEventListener("keydown", shortcutHandler)
+  window.addCleanup(() => document.removeEventListener("keydown", shortcutHandler))
 })
