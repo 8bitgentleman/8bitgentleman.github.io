@@ -1,16 +1,16 @@
 // types.ts
 // roam-api-sdk.d.ts
-  
+
 export interface PageJSON {
-    [key: string]: any;
+  [key: string]: any
 }
-  
+
 interface Frontmatter {
-	[key: string]: string;
-  }
+  [key: string]: string
+}
 
 export interface BlockInfo {
-    pageName: string;
-    blockString: string;
-	children?:any;
+  pageName: string
+  blockString: string
+  children?: any
 }

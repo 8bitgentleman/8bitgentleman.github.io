@@ -31,14 +31,14 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#FFFCF0",//background
+          light: "#FFFCF0", //background
           lightgray: "#E6E4D9", //borders
           gray: "#B7B5AC", // graph links, heavier borders, accents metadata & DONE text
-          darkgray: "#4e4e4e",//body text and icons
+          darkgray: "#4e4e4e", //body text and icons
           dark: "#2b2b2b", //page title, header text and icons
-          secondary: "#D14D41",//link colour, current [[graph view|graph]] node
-          tertiary: "#4385BE",//hover states and visited [[graph view|graph]] nodes
-          highlight: "#E6E4D950" //internal link background, highlighted text, [[syntax highlighting|highlighted lines of code]]
+          secondary: "#D14D41", //link colour, current [[graph view|graph]] node
+          tertiary: "#4385BE", //hover states and visited [[graph view|graph]] nodes
+          highlight: "#E6E4D950", //internal link background, highlighted text, [[syntax highlighting|highlighted lines of code]]
         },
         darkMode: {
           light: "#100F0F",
@@ -48,7 +48,7 @@ const config: QuartzConfig = {
           dark: "#CECDC3",
           secondary: "#D14D41",
           tertiary: "#4385BE",
-          highlight: "#403E3C15"
+          highlight: "#403E3C15",
         },
       },
     },
@@ -58,7 +58,7 @@ const config: QuartzConfig = {
       Plugin.FrontMatter(),
       Plugin.TableOfContents(),
       Plugin.CreatedModifiedDate({
-        priority: ["git","frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
+        priority: ["git", "frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({

@@ -1,27 +1,22 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import { SimpleSlug } from "./quartz/util/path";
+import { SimpleSlug } from "./quartz/util/path"
 
 // Define the filter function
-function filterPages(note:any) {
+function filterPages(note: any) {
   // Define a list of titles to skip
-  const titlesToSkip = [
-    'test',
-    'about these notes',
-    'uses',
-  ]; 
-  const hasStatus = note.frontmatter && 'status' in note.frontmatter;
+  const titlesToSkip = ["test", "about these notes", "uses"]
+  const hasStatus = note.frontmatter && "status" in note.frontmatter
   // Convert the title to lowercase for case-insensitive comparison
-  const titleLower = note.frontmatter?.title.toLowerCase();
+  const titleLower = note.frontmatter?.title.toLowerCase()
   // Check if the title is not in the list of titles to skip
-  const titleNotInSkipList = !titlesToSkip.includes(titleLower);
-  
-  // Return true if both conditions are met
-  return hasStatus && titleNotInSkipList;
-  
-  // return !titlesToSkip.includes(titleLower);
-  return note.frontmatter && 'status' in note.frontmatter;
+  const titleNotInSkipList = !titlesToSkip.includes(titleLower)
 
+  // Return true if both conditions are met
+  return hasStatus && titleNotInSkipList
+
+  // return !titlesToSkip.includes(titleLower);
+  return note.frontmatter && "status" in note.frontmatter
 }
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -40,7 +35,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     // Component.Breadcrumbs(),
     Component.ArticleTitle(),
-    Component.ContentMeta({showComma:false}),
+    Component.ContentMeta({ showComma: false }),
     Component.TagList(),
   ],
   left: [
@@ -76,24 +71,25 @@ export const defaultContentPageLayout: PageLayout = {
           fontSize: 0.4,
           opacityScale: 0.8,
         },
-      })),
+      }),
+    ),
     Component.DesktopOnly(
-      Component.RecentNotes({ 
-        linkToMore: "tags/writing" as SimpleSlug, 
+      Component.RecentNotes({
+        linkToMore: "tags/writing" as SimpleSlug,
         title: "Recent Writing",
         filter: filterPages,
-        // limit: 5 
-      })
+        // limit: 5
+      }),
     ),
     Component.DesktopOnly(Component.Backlinks()),
     Component.MobileOnly(Component.Backlinks()),
     Component.MobileOnly(
-      Component.RecentNotes({ 
-        linkToMore: "tags/writing" as SimpleSlug, 
+      Component.RecentNotes({
+        linkToMore: "tags/writing" as SimpleSlug,
         title: "Recent Writing",
         filter: filterPages,
-        // limit: 5 
-      })
+        // limit: 5
+      }),
     ),
   ],
 }

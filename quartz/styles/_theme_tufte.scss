@@ -2,151 +2,148 @@
 // TUFTE //
 ///////////
 body {
-    counter-reset: sidenote-counter;
-  }
-  // sidebar
-  .sidenote,
-  .marginnote {
-      // float: right;
-      // clear: right;
-      // margin-right: -60%;
-      // width: 50%;
-      // margin-top: 0.3rem;
-      // margin-bottom: 0;
-      font-size: 1rem;
-      // line-height: 1.3;
-      // vertical-align: baseline;
-      // position: relative;
-      display: none;
-  }
+  counter-reset: sidenote-counter;
+}
+// sidebar
+.sidenote,
+.marginnote {
+  // float: right;
+  // clear: right;
+  // margin-right: -60%;
+  // width: 50%;
+  // margin-top: 0.3rem;
+  // margin-bottom: 0;
+  font-size: 1rem;
+  // line-height: 1.3;
+  // vertical-align: baseline;
+  // position: relative;
+  display: none;
+}
 
-  
-  .sidenote-number {
-      counter-increment: sidenote-counter;
-      font-size: 1rem;
-      top: -0.2rem;
-      left: 0.1rem;
-      position: relative;
-      vertical-align: baseline;
-      color:var(--tertiary);//#5f9b65;
-  }
-  .sidenote-number {
-    display: inline-block;
-    width: .8rem;
-    height: .8rem;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid var(--tertiary);
-    color: var(--darkgray);
-    font-size: .8rem;
-    line-height: .8rem;
-  }
-  
-  // .sidenote-number>sup{
-  //   border-radius: 50%;
-  //     border:1px solid white;
-  //     height:10px;
-  // }
-  
-  .sidenote-number:after,
-  .sidenote-number:before,
-  .sidenote:before {
-      // font-family: et-book-roman-old-style;
-      position: relative;
-      vertical-align: baseline;
-      color:var(--tertiary);//#5f9b65;
-  }
-  .sidenote-number:before {
-    // content: "[";
-    font-size: 1rem;
-    top: -0.3rem !important;
-    right: 0.01rem;
-  }
-  .sidenote-number:after {
-      // content: "]";
-      font-size: 1rem;
-      top: -0.3rem;
-      left: 0.01rem;
-  }
-  
-  .sidenote:before {
-      // content: counter(sidenote-counter) " ";
-      font-size: 1rem;
-      top: -0.5rem;
-  }
-  
-  blockquote .sidenote,
-  blockquote .marginnote {
-      margin-right: -82%;
-      min-width: 59%;
-      text-align: left;
-  }
-  
-  .marginnote > code,
-  .sidenote > code {
-      font-size: 1rem;
-  }
-  
-  
-  input.margin-toggle {
-    display: none;
-  }
-  // make sure to avoid strike throughs
-  li:has(> input[type="checkbox"].margin-toggle:checked) {
-    text-decoration: inherit !important;
-    color: inherit !important;
-  }
+.sidenote-number {
+  counter-increment: sidenote-counter;
+  font-size: 1rem;
+  top: -0.2rem;
+  left: 0.1rem;
+  position: relative;
+  vertical-align: baseline;
+  color: var(--tertiary); //#5f9b65;
+}
+.sidenote-number {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid var(--tertiary);
+  color: var(--darkgray);
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
 
-  label.sidenote-number {
-    display: inline-block;
-    max-height: 2rem; /* should be less than or equal to paragraph line-height */
-  }
-  
+// .sidenote-number>sup{
+//   border-radius: 50%;
+//     border:1px solid white;
+//     height:10px;
+// }
+
+.sidenote-number:after,
+.sidenote-number:before,
+.sidenote:before {
+  // font-family: et-book-roman-old-style;
+  position: relative;
+  vertical-align: baseline;
+  color: var(--tertiary); //#5f9b65;
+}
+.sidenote-number:before {
+  // content: "[";
+  font-size: 1rem;
+  top: -0.3rem !important;
+  right: 0.01rem;
+}
+.sidenote-number:after {
+  // content: "]";
+  font-size: 1rem;
+  top: -0.3rem;
+  left: 0.01rem;
+}
+
+.sidenote:before {
+  // content: counter(sidenote-counter) " ";
+  font-size: 1rem;
+  top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+  margin-right: -82%;
+  min-width: 59%;
+  text-align: left;
+}
+
+.marginnote > code,
+.sidenote > code {
+  font-size: 1rem;
+}
+
+input.margin-toggle {
+  display: none;
+}
+// make sure to avoid strike throughs
+li:has(> input[type="checkbox"].margin-toggle:checked) {
+  text-decoration: inherit !important;
+  color: inherit !important;
+}
+
+label.sidenote-number {
+  display: inline-block;
+  max-height: 2rem; /* should be less than or equal to paragraph line-height */
+}
+
+label.margin-toggle:not(.sidenote-number) {
+  display: inline;
+}
+
+.margin-toggle:checked + .sidenote,
+.margin-toggle:checked + .marginnote {
+  display: block;
+  float: left;
+  left: 1rem;
+  clear: both;
+  width: 95%;
+  margin: 1rem 2.5%;
+  vertical-align: baseline;
+  position: relative;
+  color: var(--tertiary);
+}
+
+label {
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
   }
-  
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote {
-        display: block;
-        float: left;
-        left: 1rem;
-        clear: both;
-        width: 95%;
-        margin: 1rem 2.5%;
-        vertical-align: baseline;
-        position: relative;
-        color:var(--tertiary);
-    }
-  
-  label {
-      cursor: pointer;
-  }
-  
-  @media (max-width: 760px) {
-    label.margin-toggle:not(.sidenote-number) {
-      display: inline;
-    }
-  
-    // .sidenote,
-    // .marginnote {
-    //     display: none;
-    // }
-  
-    // .margin-toggle:checked + .sidenote,
-    // .margin-toggle:checked + .marginnote {
-    //     display: block;
-    //     float: left;
-    //     left: 1rem;
-    //     clear: both;
-    //     width: 95%;
-    //     margin: 1rem 2.5%;
-    //     vertical-align: baseline;
-    //     position: relative;
-    // }
-  
-    // label {
-    //     cursor: pointer;
-    // }
-  }
-  
+
+  // .sidenote,
+  // .marginnote {
+  //     display: none;
+  // }
+
+  // .margin-toggle:checked + .sidenote,
+  // .margin-toggle:checked + .marginnote {
+  //     display: block;
+  //     float: left;
+  //     left: 1rem;
+  //     clear: both;
+  //     width: 95%;
+  //     margin: 1rem 2.5%;
+  //     vertical-align: baseline;
+  //     position: relative;
+  // }
+
+  // label {
+  //     cursor: pointer;
+  // }
+}

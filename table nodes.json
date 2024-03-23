@@ -6,9 +6,9 @@
       "children": [
         {
           "type": "text",
-          "value": "Table",
+          "value": "Table"
         }
-      ],
+      ]
     },
     {
       "type": "list",
@@ -26,9 +26,9 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "{{[[table]]}}",
+                  "value": "{{[[table]]}}"
                 }
-              ],
+              ]
             },
             {
               "type": "list",
@@ -46,9 +46,9 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "another table",
+                          "value": "another table"
                         }
-                      ],
+                      ]
                     },
                     {
                       "type": "list",
@@ -70,11 +70,11 @@
                                 }
                               ]
                             }
-                          ],
+                          ]
                         }
-                      ],
+                      ]
                     }
-                  ],
+                  ]
                 },
                 {
                   "type": "listItem",
@@ -86,9 +86,9 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "more subtext",
+                          "value": "more subtext"
                         }
-                      ],
+                      ]
                     },
                     {
                       "type": "list",
@@ -110,11 +110,11 @@
                                 }
                               ]
                             }
-                          ],
+                          ]
                         }
-                      ],
+                      ]
                     }
-                  ],
+                  ]
                 },
                 {
                   "type": "listItem",
@@ -126,9 +126,9 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "more subtext",
+                          "value": "more subtext"
                         }
-                      ],
+                      ]
                     },
                     {
                       "type": "list",
@@ -150,17 +150,17 @@
                                 }
                               ]
                             }
-                          ],
+                          ]
                         }
-                      ],
+                      ]
                     }
-                  ],
+                  ]
                 }
-              ],
+              ]
             }
-          ],
+          ]
         }
-      ],
+      ]
     }
   ]
 }

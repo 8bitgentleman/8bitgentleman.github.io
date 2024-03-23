@@ -1,62 +1,60 @@
 .toggle-table {
-    // border-top: 1px solid var(--darkgray);
-    // border-right: 1px solid var(--darkgray);
-    // border-left: 1px solid var(--darkgray);
-    border-radius: 4px;
+  // border-top: 1px solid var(--darkgray);
+  // border-right: 1px solid var(--darkgray);
+  // border-left: 1px solid var(--darkgray);
+  border-radius: 4px;
 }
 .parent-div:has(.hidden-div) {
-    
 }
 .toggle-checkbox {
-    display: none;
+  display: none;
 }
-.visible-div> span{
-    padding: 16px 16px 8px;
-	
+.visible-div > span {
+  padding: 16px 16px 8px;
 }
 .parent-div:first-of-type {
-    border-top: 1px solid var(--darkgray);
-  }
+  border-top: 1px solid var(--darkgray);
+}
 .visible-div {
-    display: flex;
-    border-bottom: 1px solid var(--darkgray);
-    border-right: 1px solid var(--darkgray);
-    border-left: 1px solid var(--darkgray);
+  display: flex;
+  border-bottom: 1px solid var(--darkgray);
+  border-right: 1px solid var(--darkgray);
+  border-left: 1px solid var(--darkgray);
 }
 
 .visible-div span:first-child {
-    width: 100px;
-    border-right: 1px solid var(--darkgray);
-    flex-shrink: 0;
+  width: 100px;
+  border-right: 1px solid var(--darkgray);
+  flex-shrink: 0;
 }
 
 .hidden-div {
-    // border-top: 1px solid var(--darkgray);
-    display: none;
-    background-color: var(--gray);
-    padding:10px;
-    color:var(--darkgray);
-    border-right: 1px solid var(--darkgray);
-    border-left: 1px solid var(--darkgray);
+  // border-top: 1px solid var(--darkgray);
+  display: none;
+  background-color: var(--gray);
+  padding: 10px;
+  color: var(--darkgray);
+  border-right: 1px solid var(--darkgray);
+  border-left: 1px solid var(--darkgray);
 }
 
 .toggle-checkbox:checked ~ .hidden-div {
-    display: block;
+  display: block;
 }
-.relative-container>span:first-of-type{
-    font-size:1.2rem;
+.relative-container > span:first-of-type {
+  font-size: 1.2rem;
 }
 .relative-container {
-    position: relative;
-    padding-right: 10px;
-  }
-  
-  .carrot-icon {
-    position: absolute;
-    right: 0;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .toggle-checkbox:checked ~ .visible-div .carrot-icon {
-    transform: rotate(90deg);
-  }
+  position: relative;
+  padding-right: 10px;
+}
+
+.carrot-icon {
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-checkbox:checked ~ .visible-div .carrot-icon {
+  transform: rotate(90deg);
+}
