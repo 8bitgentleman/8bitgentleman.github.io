@@ -464,11 +464,21 @@ circle[id^="tags/"] {
 // make sidebar vertical on small screens
 @media only screen and (max-width: 780px) {
   .page > #quartz-body .sidebar {
-    flex-direction: column;
+    // flex-direction: column;
   }
 }
 
 // tag page
 li.section-li > .section {
   grid-template-columns: 6em 1fr 3fr;
+}
+@media only screen and (min-width: 780px) {
+  .page>#quartz-body .sidebar.left{
+    flex-direction: inherit !important;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .page-title{
+    width: 100%;
+  }
 }
