@@ -60,7 +60,9 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options> | undefined> =
                 const classes = (node.properties.className ?? []) as string[]
                 const isExternal = isAbsoluteUrl(dest)
                 classes.push(isExternal ? "external" : "internal")
-
+                if (isExternal) {
+                  node.properties.target = "_blank"
+                }
                 if (isExternal && opts.externalLinkIcon) {
                   node.children.push({
                     type: "element",
