@@ -161,7 +161,9 @@ body[data-slug^="tags\/"] li[data-status="evergreen"] > div:before {
   text-shadow: 0 0 0 rgb(102, 128, 11);
   padding-right: 10px;
 }
-
+body[data-slug^="tags\/"] li[data-status="evergreen"] .meta {
+  opacity:1;
+}
 //tag page book style
 body[data-slug^="tags\/"] li:has(a[href*="/Book/"]) > div:before {
   content: "📖 ";
@@ -470,7 +472,7 @@ circle[id^="tags/"] {
 
 // tag page
 li.section-li > .section {
-  grid-template-columns: 6em 1fr 3fr;
+  grid-template-columns: 3em 1fr 3fr;
 }
 @media all and (min-width: $fullPageWidth) {
   .page>#quartz-body .sidebar.left{
