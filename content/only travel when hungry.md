@@ -2,7 +2,7 @@
 title: "only travel when hungry"
 created: 2023-12-23
 updated: 2023-12-23
-status: #acorn
+status: acorn
 tags: 
 - writing
 - travel
