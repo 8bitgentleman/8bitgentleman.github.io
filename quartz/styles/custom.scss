@@ -18,7 +18,17 @@ body {
 html[saved-theme="dark"] body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4' height='4' viewBox='0 0 4 4' style='enable-background:new 0 0 4 4;'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:%23403e3c;fill-opacity:0.4;%7D%3C/style%3E%3Cpath class='st0' d='M1,3h1v1H1V3z M3,1h1v1H3V1z'/%3E%3C/svg%3E") !important;
 }
-
+p,
+ul,
+text,
+a,
+tr,
+td,
+li,
+ol,
+ul{
+  hyphens: manual;
+}
 .callout[data-callout="note"] {
   --color: rgb(67, 133, 190) !important;
   --border: rgb(32, 94, 166) !important;
