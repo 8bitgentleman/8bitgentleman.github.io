@@ -10,7 +10,7 @@ tags:
 ---
 
 
-I wrote this partially a long time and and partially yesterday
+*I wrote this partially a long time ago and partially yesterday, the day before my grandmother's funeral.*
 
 We have all been sharing & remembering so many moments over the past few days but I have been thinking about the impacts grandma had on all of us and how we impacted her
 

@@ -25,7 +25,7 @@ Already I cycle projects and interests roughly in seasons. This emerges naturall
 This has been especially useful while learning to code. Do little projects, learning something specific each time, and before you know it you have a toolbox full of useful skills.
 Also keeps the [[ADD]] boredom at bay
 
-### Examples of small experments
+### Examples of small experiments
 - Custom [[AI]] holiday wrapping paper
 - [[cataloging the mundane]]
 - pretty much all of my [[RoamDepot]] extensions

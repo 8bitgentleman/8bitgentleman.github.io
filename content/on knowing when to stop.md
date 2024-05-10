@@ -4,7 +4,8 @@ status: evergreen
 date: 2023-09-23
 updated: 2024-01-01
 tags:
-    - writing
+  - writing
+  - favorite
 ---
 Everyone talks about how to start your project, your career, a relationship but almost nobody talks about how to know when to _stop_.
 1. stop when you're spinning your wheels 
