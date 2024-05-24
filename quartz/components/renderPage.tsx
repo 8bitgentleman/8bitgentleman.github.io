@@ -215,6 +215,12 @@ export function renderPage(
     <html lang={lang}>
       <Head {...componentData} />
       <body data-slug={slug}>
+        <svg width="0" height="0">
+          <filter id="ink">
+              <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+          </filter>
+        </svg>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}
