@@ -243,6 +243,18 @@ export function renderPage(
         .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
+  const poemComment = `
+  <!----------------------------------------------->
+  <!--                                           -->
+  <!--      Hello, curious explorer of code,     -->
+  <!--   In this digital realm we briefly meet.  -->
+  <!--   Our shared curiosity connects us now,   -->
+  <!-- A fleeting moment, yet profound and sweet.-->
+  <!--                                           -->
+  <!-- https://github.com/8bitgentleman/8bitgentleman.github.io   -->
+  <!--                                           -->
+  <!----------------------------------------------->
 
-  return "<!DOCTYPE html>\n" + render(doc)
+  `
+  return poemComment + "<!DOCTYPE html>\n" + render(doc)
 }
