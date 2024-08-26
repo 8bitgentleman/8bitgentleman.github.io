@@ -247,7 +247,7 @@ img.cover-image {
   border-bottom: 4px solid var(--secondary);
   border-left: 4px double var(--secondary);
   padding-left: 4px;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 body[data-slug^="tags\/"] ul.tags,

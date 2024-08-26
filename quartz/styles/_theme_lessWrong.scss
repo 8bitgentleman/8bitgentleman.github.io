@@ -95,7 +95,7 @@ html[saved-theme="dark"] {
 h2 {
   font-size: 36px !important;
 }
-h2 {
+h2:not(.page-title) {
   font-size: 26px !important;
 }
 h3 {
