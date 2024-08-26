@@ -39,6 +39,7 @@ const config: QuartzConfig = {
           secondary: "#D14D41", //link colour, current [[graph view|graph]] node
           tertiary: "#4385BE", //hover states and visited [[graph view|graph]] nodes
           highlight: "#E6E4D950", //internal link background, highlighted text, [[syntax highlighting|highlighted lines of code]]
+          textHighlight: "#fff23688",
         },
         darkMode: {
           light: "#100F0F",
@@ -49,6 +50,7 @@ const config: QuartzConfig = {
           secondary: "#D14D41",
           tertiary: "#4385BE",
           highlight: "#403E3C15",
+          textHighlight: "#b3aa0288",
         },
       },
     },
@@ -60,7 +62,6 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({
         priority: ["git", "frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
-      Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({
         theme: {
           light: "github-light",
@@ -76,6 +77,7 @@ const config: QuartzConfig = {
       Plugin.TufteComponents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest", externalLinkIcon:false }),
       Plugin.Description(),
+      Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

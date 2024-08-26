@@ -22,6 +22,7 @@ function filterPages(note: any) {
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
+  afterBody: [],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/8bitgentleman/matt", //,
