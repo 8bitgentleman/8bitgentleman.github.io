@@ -12,3 +12,24 @@
     }
   }
 }
+
+.edit-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-right: 10px;
+  color: var(--gray);
+  flex-shrink: 0;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.content-meta:hover .edit-icon {
+  opacity: 1;
+}
+
+.edit-icon:hover {
+  color: var(--secondary);
+}

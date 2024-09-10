@@ -2,6 +2,7 @@
 title: Experiment Small
 status: budding
 date: 2023-12-21
+uid: Rv0R2Nhh2
 tags:
     - writing
     - goals
