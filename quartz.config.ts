@@ -71,7 +71,7 @@ const config: QuartzConfig = {
       }),
       // Plugin.RoamTables(),
       Plugin.togglableTables(),
-      // Plugin.RoamFlavoredMarkdown(),
+      Plugin.RoamFlavoredMarkdown(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TufteComponents(),
