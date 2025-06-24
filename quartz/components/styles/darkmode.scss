@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 .darkmode {
   cursor: pointer;
   padding: 0;
@@ -6,14 +8,16 @@
   border: none;
   width: 20px;
   height: 20px;
-  margin: 0 10px;
+  margin: 0 0;
+  
+  @media all and (max-width: $fullPageWidth) {
+    margin: 0;
+  }
   text-align: inherit;
 
   & svg {
-    position: absolute;
     width: 20px;
     height: 20px;
-    top: calc(50% - 10px);
     fill: var(--darkgray);
     transition: opacity 0.1s ease;
   }
