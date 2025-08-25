@@ -21,6 +21,6 @@ I have many thoughts around the use of AI as a __tool__, something that I consta
 
 In general for things outside of the technical I see the growing use of AI as something downstream of the loneliness epidemic
 
-### Writing I may use AI for (but I currently do no)
+### Writing I may use AI for (but currently do not)
 
 - essay summaries
